@@ -1,0 +1,10 @@
+@import 'variables.css';
+
+.typography {
+  display: block;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple Color Emoji', Arial,
+    sans-serif;
+  color: var(--dark);
+}

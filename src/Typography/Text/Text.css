@@ -1,0 +1,13 @@
+.text {
+  letter-spacing: 0.003em;
+}
+
+.small {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.normal {
+  font-size: 15px;
+  line-height: 18px;
+}
