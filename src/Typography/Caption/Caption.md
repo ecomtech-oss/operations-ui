@@ -1,7 +1,7 @@
 #### Использование
 
 ```jsx static
-import { Caption } from '@samokat/ui/Caption'
+import { Caption } from '@samokat/operations-ui/Caption'
 
 //...
 <Caption>Здравствуйте!</Caption>

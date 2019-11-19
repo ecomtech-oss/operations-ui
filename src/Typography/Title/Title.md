@@ -1,7 +1,7 @@
 #### Использование
 
 ```jsx static
-import { Title } from '@samokat/ui/Typography'
+import { Title } from '@samokat/operations-ui/Typography'
 
 //...
 <Title>Самокат</Title>

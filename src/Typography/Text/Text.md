@@ -1,7 +1,7 @@
 #### Использование
 
 ```jsx static
-import { Text } from '@samokat/ui/Typography'
+import { Text } from '@samokat/operations-ui/Typography'
 
 //...
 <Text>Здравствуйте!</Text>
