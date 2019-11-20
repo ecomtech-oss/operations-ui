@@ -6,7 +6,7 @@ import * as styles from './Title.css';
 
 interface Props {
   /** Контент */
-  children: string | string[];
+  children: React.ReactNode;
 
   /** Дополнительный класс */
   className?: string;
