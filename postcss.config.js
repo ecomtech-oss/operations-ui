@@ -1,7 +1,9 @@
 module.exports = {
   plugins: [
+    require('postcss-import')({
+      path: './src/',
+    }),
     require('autoprefixer'),
-    // PostCSS modules must be last plugin
-    // require('postcss-modules'),
+    require('postcss-nested'),
   ],
 };

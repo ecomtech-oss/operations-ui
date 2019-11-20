@@ -1,0 +1,14 @@
+.subtitle {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.normal {
+  font-weight: normal;
+  letter-spacing: 0.002em;
+}

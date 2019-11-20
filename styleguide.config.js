@@ -1,8 +1,24 @@
 module.exports = {
-  components: 'src/**/[A-Z]*.tsx',
   defaultExample: true,
   propsParser: require('react-docgen-typescript').withDefaultConfig().parse,
   title: 'Samokat Operations UI kit',
+  skipComponentsWithoutExample: true,
+  sections: [
+    {
+      name: 'UI Components',
+      exampleMode: 'collapse',
+      usageMode: 'collapse',
+      sections: [
+        {
+          name: 'Typography',
+          content: 'src/Typography/Typography.md',
+          components: 'src/Typography/**/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
+      ],
+    },
+  ],
   webpackConfig: {
     module: {
       rules: [
