@@ -1,7 +1,9 @@
 #### Использование
 
 ```jsx static
-import { Subtitle } from '@samokat/operations-ui/Typography'
+import { Typography } from '@samokat/operations-ui'
+
+const { Subtitle } = Typography
 
 //...
 <Subtitle>Самокат</Subtitle>
