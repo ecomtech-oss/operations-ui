@@ -1,8 +1,10 @@
 import React from 'react';
-import cx from 'classnames';
+import classnames from 'classnames/bind';
 
 import { Typography } from '../internal/Typography';
 import * as styles from './Subtitle.css';
+
+const cx = classnames.bind(styles);
 
 interface Props {
   /** Контент */
@@ -27,10 +29,7 @@ export const Subtitle = ({
   const weight = bold ? 'bold' : 'normal';
 
   return (
-    <Typography
-      className={cx(styles.subtitle, styles[weight], className)}
-      tag={tag}
-    >
+    <Typography className={cx('subtitle', weight, className)} tag={tag}>
       {children}
     </Typography>
   );

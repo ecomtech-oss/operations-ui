@@ -1,8 +1,10 @@
 import React from 'react';
-import cx from 'classnames';
+import classnames from 'classnames/bind';
 
 import { Typography } from '../internal/Typography';
 import * as styles from './Text.css';
+
+const cx = classnames.bind(styles);
 
 interface Props {
   /** Контент */
@@ -25,7 +27,7 @@ export const Text = ({
   size = 'normal',
 }: Props) => {
   return (
-    <Typography className={cx(styles.text, styles[size], className)} tag={tag}>
+    <Typography className={cx('text', size, className)} tag={tag}>
       {children}
     </Typography>
   );
