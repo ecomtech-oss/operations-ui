@@ -5,6 +5,9 @@ module.exports = {
   skipComponentsWithoutExample: true,
   sections: [
     {
+      content: 'README.md',
+    },
+    {
       name: 'UI Components',
       exampleMode: 'collapse',
       usageMode: 'collapse',
