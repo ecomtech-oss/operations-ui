@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '10'
+- '12'
+cache: yarn
+script: yarn ci
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: igor@kamyshev.me
+  api_key:
+    secure: gadolSiyXc0bWjJWAwSZEargFUve1jnGuFQoP94BUjvZOgKDVkbR+sefKS7LMNXZMZxTgbAXux2B1hWnGnn8pc8L1hZUptWC8UcXzQTTp3F/tnRiMVHIBvlOTr4q7/WH5C6dW6V6Uj0unXmQ9XpdaCwClrqqipcvi7/mcsUO4Mk3Lfn/5DdOG1bkq6eT4hWvA6oS5aAWOvXBaJpnSoMbDi4qvSzR/L5v5ELYwLwVQKDaUjMZuGqvwgeUnhPN3NFUz+MIvH6EKMmbom/W6ftzJEpWMSI8/5zo5IkggrZ3kKq/T7Pjc2deyXpE0qhclZitVYtvx9h+zH155O88pXBmwle0kUjnh1Hi2/Ge7k9XqqG61MrG6vPT47AUpPheBsRkwEyObEV0h7dmJgd2j88UOssjxKfoEYx3fR4pre6M0LTrsKb6XOFSnE+XuYcg4Vx+8YoCrviH8euphzboR0viiWEg7gJ7EiuiWDl6XwszobBm3AXaVt1btDrs3Su2rNfYXlb3QEiBNTzjKZOS2hulRA1bXCGYNUNm42hkfTvsgyXqTFzXeurZ/7AX0xvZJQEHu+MDoi1sRhpYKiDqKlwn/yqjARSbtKpr7/fuvF75gR70nP6+zblteRxEPTaZwf4KQt1epDkViquKR6YHYC7LDQ89B10BNHUPzmZzNkcS8N0=
+  on:
+    tags: true
+    repo: samokat-oss/operations-ui
