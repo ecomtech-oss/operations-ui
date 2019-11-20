@@ -7,6 +7,7 @@
     "dev": "styleguidist server",
     "build:styleguide": "styleguidist build",
     "build:lib": "gulp",
+    "ci": "yarn s lint",
     "prepare": "install-self-peers -- --ignore-scripts && build:lib",
     "s": "yarn soda"
   },
