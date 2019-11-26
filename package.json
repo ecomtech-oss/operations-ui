@@ -19,6 +19,7 @@
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
+    "@samokat/operations-icons": "^1.0.0",
     "@solid-soda/scripts": "^1.14.7",
     "@team-griffin/install-self-peers": "^1.1.1",
     "@types/classnames": "^2.2.9",

@@ -19,6 +19,13 @@ module.exports = {
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },
+        {
+          name: 'Icon',
+          content: 'src/Icon/Icon.md',
+          components: 'src/Icon/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
       ],
     },
   ],
