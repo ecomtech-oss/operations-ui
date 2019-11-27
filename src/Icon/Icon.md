@@ -1,10 +1,12 @@
 #### Использование
 
+Управление размером иконки из css (пропс className) осуществляется через font-size
+
 ```jsx static
 import { Icon } from '@samokat/operations-ui';
 import { Calendar } from '@samokat/operations-icons';
 
-<Icon type={Calendar} />
+<Icon children={Calendar} />
 ```
 
 #### Примеры
