@@ -21,8 +21,13 @@ module.exports = {
         },
         {
           name: 'Icon',
-          content: 'src/Icon/Icon.md',
           components: 'src/Icon/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
+        {
+          name: 'Loader',
+          components: 'src/Loader/[A-Z]*.tsx',
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },
