@@ -3,16 +3,13 @@
 }
 
 .small {
+  width: 16px;
+  height: 16px;
+}
+
+.medium {
   width: 24px;
   height: 24px;
-}
-
-.white {
-  filter: opacity(0.6);
-}
-
-.grey {
-  filter: invert(30%);
 }
 
 @keyframes rotatingLoader {

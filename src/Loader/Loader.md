@@ -1,15 +1,43 @@
 ### Использование
 
 ```jsx static
-import { Loader } from '@samokat/operations-ui';
+import { Loader, LoaderPresets } from '@samokat/operations-ui';
 
-<Loader />
+<Loader {...LoaderPresets.white}/>
 ```
 
 #### Примеры
+size=small
 ```js
-<Loader color="grey"/>
+<Loader size="small"/>
+```
+size=medium
+```js
+<Loader size="medium"/>
+```
+По умолчанию
+```js
+<Loader />
+```
+
+С пресетом white
+```js
+import * as LoaderPresets from './presets';
+
 <div style={{ background: '#198CFF' }}>
-  <Loader color="white"/>
+  <Loader {...LoaderPresets.white}/>
 </div>
+```
+С пресетом grey
+
+```js
+import * as LoaderPresets from './presets';
+
+<Loader {...LoaderPresets.grey}/>
+```
+С пресетом blue
+```js
+import * as LoaderPresets from './presets';
+
+<Loader {...LoaderPresets.blue}/>
 ```
