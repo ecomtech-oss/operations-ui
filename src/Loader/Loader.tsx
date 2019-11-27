@@ -6,9 +6,9 @@ import * as styles from './Loader.css';
 const cx = cn.bind(styles);
 
 interface Props {
-  /** Цвет, по умолчанию grey */
+  /** Цвет */
   color?: 'white' | 'grey';
-  /** Размер,  по умолчанию small */
+  /** Размер */
   size?: 'small';
   /** Дополнительный класс */
   className?: string;
