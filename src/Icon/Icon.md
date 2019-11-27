@@ -10,5 +10,5 @@ import { Calendar } from '@samokat/operations-icons';
 #### Примеры
 ```js
 import { People } from '@samokat/operations-icons';
-<Icon type={People} size="medium"/>
+<Icon children={People} size="medium" />
 ```
