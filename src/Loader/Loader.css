@@ -1,0 +1,25 @@
+.loader {
+  animation: rotatingLoader 0.8s steps(12, start) infinite;
+}
+
+.small {
+  width: 24px;
+  height: 24px;
+}
+
+.white {
+  filter: opacity(0.6);
+}
+
+.grey {
+  filter: invert(30%);
+}
+
+@keyframes rotatingLoader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
