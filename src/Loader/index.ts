@@ -1,5 +1,4 @@
 import { Loader } from './Loader';
-import * as LoaderPresets from './presets';
-
+import * as presets from './presets';
+Loader.presets = presets;
 export default Loader;
-export { LoaderPresets };
