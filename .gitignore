@@ -2,3 +2,4 @@ node_modules
 *.css.json
 dist
 styleguide
+./vscode

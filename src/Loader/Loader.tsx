@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames/bind';
 
 import * as styles from './Loader.css';
-
+import * as presets from './presets';
 const cx = cn.bind(styles);
 
 interface Props {
@@ -12,6 +12,8 @@ interface Props {
   opacity?: number;
   /** Размер */
   size?: 'small' | 'medium';
+
+  presets: typeof presets;
   /** Дополнительный класс */
   className?: string;
 }
@@ -36,3 +38,5 @@ export const Loader = ({
     </div>
   );
 };
+
+Loader.presets = presets;
