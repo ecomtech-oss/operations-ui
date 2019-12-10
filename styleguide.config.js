@@ -1,6 +1,8 @@
 module.exports = {
   defaultExample: true,
-  propsParser: require('react-docgen-typescript').withDefaultConfig().parse,
+  propsParser: require('react-docgen-typescript').withDefaultConfig({
+    savePropValueAsString: true,
+  }).parse,
   title: 'Samokat Operations UI kit',
   skipComponentsWithoutExample: true,
   sections: [
