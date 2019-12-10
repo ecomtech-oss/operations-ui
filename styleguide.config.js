@@ -22,14 +22,8 @@ module.exports = {
           usageMode: 'collapse',
         },
         {
-          name: 'Icon',
-          components: 'src/Icon/[A-Z]*.tsx',
-          exampleMode: 'collapse',
-          usageMode: 'collapse',
-        },
-        {
-          name: 'Loader',
-          components: 'src/Loader/[A-Z]*.tsx',
+          name: 'Graphic',
+          components: 'src/{Icon,Loader}/[A-Z]*.tsx',
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },
