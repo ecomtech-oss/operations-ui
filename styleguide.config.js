@@ -31,6 +31,13 @@ module.exports = {
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },
+        {
+          name: 'Button',
+          content: 'src/Buttons/Button.md',
+          components: 'src/Buttons/**/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
       ],
     },
   ],
