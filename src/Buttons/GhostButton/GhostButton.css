@@ -1,0 +1,63 @@
+@import '../../variables.css';
+
+.common {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dark);
+  background-color: var(--white);
+  transition: backgroun-color 0.2s;
+
+  &:hover {
+    background-color: var(--grey-3);
+  }
+
+  &:active {
+    background-color: var(--grey-2);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  .icon {
+    color: currentColor;
+  }
+}
+
+.medium {
+  height: 32px;
+  padding: 5px 8px;
+  font-size: 15px;
+  line-height: 18px;
+  border-radius: 4px;
+
+  &.just-icon {
+    padding: 5px;
+  }
+
+  .right-space {
+    margin-right: 6px;
+  }
+}
+
+.small {
+  height: 24px;
+  padding: 5px 6px;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 3px;
+
+  &.just-icon {
+    padding: 4px;
+  }
+
+  .right-space {
+    margin-right: 4px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
