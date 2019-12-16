@@ -6,27 +6,13 @@ import Icon, { IconElement } from '../../Icon';
 import { BaseButtonsProps } from '../Base';
 import * as baseStyles from '../Base.css';
 import * as styles from './RoundButton.css';
-
+import { Colors, loaderPresetMapper } from './loaderPresetsMapper';
+import { ButtonSizes, iconSizeMapper } from './iconSizeMapper';
 const cx = cn.bind(styles);
-
-const mapIconSize: { [key in ButtonSizes]: 'medium' | 'small' } = {
-  large: 'medium',
-  medium: 'small',
-};
-
-const loaderPresetMapper: { [key in Colors]: Colors } = {
-  blue: 'white',
-  white: 'blue',
-  grey: 'grey',
-};
-
-type ButtonSizes = 'medium' | 'large';
-type Colors = 'blue' | 'white' | 'grey';
 
 export interface RoundButtonProps {
   /**  Размер кнопки */
-  size?: 'medium' | 'large';
-  /**  Кнопка принимает ширину родителя */
+  size?: ButtonSizes;
   /**  В состоянии загрузке */
   loading?: boolean;
   /**  В состоянии disabled */
@@ -34,7 +20,7 @@ export interface RoundButtonProps {
   /**  Иконка  */
   icon: IconElement;
   /**  Цвет */
-  color?: 'blue' | 'white' | 'grey';
+  color?: Colors;
   /** Дополнительный класс */
   className?: string;
 }
@@ -56,7 +42,7 @@ export const RoundButton = forwardRef<
     ref,
   ) => {
     const loaderPreset = Loader.presets[loaderPresetMapper[color]];
-    const iconSize = mapIconSize[size];
+    const iconSize = iconSizeMapper[size];
     const isDisabled = loading || disabled;
 
     return (
