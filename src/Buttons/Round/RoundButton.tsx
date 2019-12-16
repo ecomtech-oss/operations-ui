@@ -57,6 +57,8 @@ export const RoundButton = forwardRef<
   ) => {
     const loaderPreset = Loader.presets[loaderPresetMapper[color]];
     const iconSize = mapIconSize[size];
+    const isDisabled = loading || disabled;
+
     return (
       <button
         className={cx(
@@ -67,7 +69,7 @@ export const RoundButton = forwardRef<
           { loading },
           className,
         )}
-        disabled={disabled}
+        disabled={isDisabled}
         ref={ref}
         {...nativeProps}
       >

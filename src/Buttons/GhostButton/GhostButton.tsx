@@ -3,16 +3,17 @@ import cn from 'classnames/bind';
 
 import Icon, { IconElement } from '../../Icon';
 import { BaseButtonsProps } from '../Base';
+import { Text, Caption } from '../../Typography';
 import * as baseStyles from '../Base.css';
 import * as styles from './GhostButton.css';
 
 interface GhostProps {
   /**  Размер кнопки */
-  size: 'small' | 'medium';
+  size?: 'small' | 'medium';
   /**  В состоянии disabled */
-  disabled: boolean;
+  disabled?: boolean;
   /**  Иконка справа */
-  icon: IconElement | null;
+  icon?: IconElement | null;
   /** Дополнительный класс */
   className?: string;
 }
@@ -26,7 +27,7 @@ export const GhostButton = forwardRef<HTMLButtonElement, Props>(
     {
       size = 'medium',
       disabled = false,
-      icon,
+      icon = null,
       children,
       className,
       ...nativeProps
@@ -34,6 +35,7 @@ export const GhostButton = forwardRef<HTMLButtonElement, Props>(
     ref,
   ) => {
     const hasChildren = Boolean(children);
+    const TextComponent = size === 'small' ? Caption : Text;
     return (
       <button
         className={cx(baseStyles.button, 'common', size, className, {
@@ -43,16 +45,14 @@ export const GhostButton = forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         {...nativeProps}
       >
-        <div className={cx('content')}>
-          {icon && (
-            <Icon
-              children={icon}
-              size={size}
-              className={cx('icon', { 'right-space': hasChildren })}
-            />
-          )}
-          <span>{children}</span>
-        </div>
+        {icon && (
+          <Icon
+            children={icon}
+            size={size}
+            className={cx('icon', { 'right-space': hasChildren })}
+          />
+        )}
+        <TextComponent>{children}</TextComponent>
       </button>
     );
   },

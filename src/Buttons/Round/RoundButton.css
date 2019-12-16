@@ -83,6 +83,16 @@
   }
 }
 
+.loading {
+  &.white,
+  &.grey,
+  &.blue {
+    &:disabled {
+      opacity: 1;
+    }
+  }
+}
+
 .hide {
   opacity: 0;
 }

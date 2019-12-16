@@ -27,9 +27,12 @@
 .primary {
   display: inline-flex;
   justify-content: center;
-  color: var(--white);
   background-color: var(--primary);
   transition: background-color 0.2s;
+
+  .text {
+    color: var(--white);
+  }
 }
 
 .primary:hover {
@@ -69,7 +72,7 @@
   }
 }
 
-.full {
+.full-width {
   width: 100%;
 }
 
@@ -94,4 +97,18 @@
 
 .hide {
   opacity: 0;
+}
+
+.loading {
+  &.primary:disabled {
+    color: var(--white);
+    background-color: var(--primary);
+    opacity: 1;
+  }
+
+  &.secondary:disabled {
+    color: var(--dark);
+    background-color: var(--grey-3);
+    opacity: 1;
+  }
 }

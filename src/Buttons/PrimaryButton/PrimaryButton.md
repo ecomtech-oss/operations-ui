@@ -20,9 +20,9 @@ import { PrimaryButton } from '@samokat/operations-ui'
 </div>
 ```
 
-full=true
+fullWidth=true
 ```js
-<PrimaryButton size="large" full={true}>Войти</PrimaryButton>
+<PrimaryButton size="large" fullWidth={true}>Войти</PrimaryButton>
 ```
 
 disabled=true

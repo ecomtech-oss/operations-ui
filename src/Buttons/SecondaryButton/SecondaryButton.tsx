@@ -1,10 +1,12 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, FC } from 'react';
 
-import { IternalButton, ExternalButtonProps } from '../Iternal/Iternal';
+import {
+  IternalButton,
+  ExternalButtonProps,
+  IternalButtonProps,
+} from '../Iternal/Iternal';
 
-export const SecondaryButton = forwardRef<
+export const SecondaryButton: FC<ExternalButtonProps> = forwardRef<
   HTMLButtonElement,
-  ExternalButtonProps
->((props: ExternalButtonProps, ref) => (
-  <IternalButton color="secondary" {...props} ref={ref} />
-));
+  IternalButtonProps
+>((props, ref) => <IternalButton color="secondary" {...props} ref={ref} />);

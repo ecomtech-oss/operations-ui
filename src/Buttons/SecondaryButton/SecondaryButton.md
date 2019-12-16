@@ -24,9 +24,9 @@ import { People } from '@samokat/operations-icons';
 </div>
 ```
 
-full=true
+fullWidth=true
 ```js
-<SecondaryButton size="large" full={true}>Отменить</SecondaryButton>
+<SecondaryButton size="large" fullWidth={true}>Отменить</SecondaryButton>
 ```
 
 disabled=true
