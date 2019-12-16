@@ -3,13 +3,15 @@ import cn from 'classnames/bind';
 
 import * as styles from './Icon.css';
 
+export type IconElement = (props: { className: string }) => JSX.Element;
+export type IconSize = 'small' | 'medium';
 interface Props {
   /** Размер иконки */
-  size?: 'small' | 'medium';
+  size?: IconSize;
   /** Дополнительный класс */
   className?: string;
   /** Иконка из пакета @samokat/operations-icons */
-  children(props: { className: string }): JSX.Element;
+  children: IconElement;
 }
 
 const cx = cn.bind(styles);

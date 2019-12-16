@@ -1,4 +1,4 @@
-interface LoaderPreset {
+export interface LoaderPreset {
   color: string;
   opacity: number;
 }

@@ -1,6 +1,7 @@
 src
 build
 !*.css.json
+*.test.*
 .browserslistrc
 .eslintrc.js
 .travis.yml
