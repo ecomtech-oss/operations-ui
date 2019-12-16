@@ -1,3 +1,3 @@
-import { Icon, IconElement } from './Icon';
-export { IconElement };
+import { Icon, IconElement, IconSize } from './Icon';
+export { IconElement, IconSize };
 export default Icon;

@@ -7,12 +7,14 @@ import { Text } from '../../Typography';
 import { BaseButtonsProps } from '../Base';
 import * as baseStyles from '../Base.css';
 import * as iternalStyles from './Iternal.css';
-
+import { iconSizeMapper } from './iconSizeMapper';
+import { ButtonSize } from './types';
+import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
+import { textSizeMapper } from './textSizeMapper';
 const cx = cn.bind(iternalStyles);
-
 export interface ExternalButtonPropsInner {
   /**  Размер кнопки */
-  size?: 'small' | 'medium' | 'large';
+  size?: ButtonSize;
   /**  Кнопка принимает ширину родителя */
   fullWidth?: boolean;
   /**  В состоянии загрузке */
@@ -20,10 +22,10 @@ export interface ExternalButtonPropsInner {
   /**  В состоянии disabled */
   disabled?: boolean;
   /**  Иконка слева */
-  startIcon?: IconElement | null;
+  leftIcon?: IconElement | null;
 
   /**  Иконка справа */
-  endIcon?: IconElement | null;
+  rightIcon?: IconElement | null;
   /** Дополнительный класс */
   className?: string;
 }
@@ -31,7 +33,7 @@ export interface ExternalButtonPropsInner {
 export type ExternalButtonProps = ExternalButtonPropsInner & BaseButtonsProps;
 
 interface IternalButtonPropsInner extends ExternalButtonPropsInner {
-  color: 'primary' | 'secondary';
+  color: Colors;
 }
 
 export type IternalButtonProps = IternalButtonPropsInner & BaseButtonsProps;
@@ -45,18 +47,19 @@ export const IternalButton = forwardRef<HTMLButtonElement, IternalButtonProps>(
       disabled = false,
       color,
       children,
-      startIcon = null,
-      endIcon = null,
+      leftIcon = null,
+      rightIcon = null,
       className,
       ...nativeProps
     }: IternalButtonProps,
     ref,
   ) => {
-    const loaderPreset =
-      color === 'primary' ? Loader.presets.white : Loader.presets.grey;
+    const loaderPreset = loaderPresetsMapper[color];
+    const iconSize = iconSizeMapper[size];
+    const textSize = textSizeMapper[size];
+
     const isDisabled = loading || disabled;
-    const iconSize = size === 'small' ? 'small' : 'medium';
-    const textSize = size === 'small' ? 'small' : 'normal';
+
     return (
       <button
         className={cx(
@@ -76,9 +79,9 @@ export const IternalButton = forwardRef<HTMLButtonElement, IternalButtonProps>(
           </div>
         )}
         <div className={cx('content', { hide: loading })}>
-          {startIcon && (
+          {leftIcon && (
             <Icon
-              children={startIcon}
+              children={leftIcon}
               size={iconSize}
               className={cx('icon', 'start-icon')}
             />
@@ -86,9 +89,9 @@ export const IternalButton = forwardRef<HTMLButtonElement, IternalButtonProps>(
           <Text size={textSize} className={cx('text')}>
             {children}
           </Text>
-          {endIcon && (
+          {rightIcon && (
             <Icon
-              children={endIcon}
+              children={rightIcon}
               size={iconSize}
               className={cx('icon', 'end-icon')}
             />

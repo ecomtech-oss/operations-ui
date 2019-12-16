@@ -44,7 +44,7 @@ export const runTestButton = AbstractButtonComponent => {
 
     test('it renders icon', () => {
       const { container } = render(
-        <AbstractButtonComponent startIcon={Logout}>
+        <AbstractButtonComponent leftIcon={Logout}>
           Exit
         </AbstractButtonComponent>,
       );

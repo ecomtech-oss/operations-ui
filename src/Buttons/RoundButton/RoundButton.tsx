@@ -7,12 +7,12 @@ import { BaseButtonsProps } from '../Base';
 import * as baseStyles from '../Base.css';
 import * as styles from './RoundButton.css';
 import { Colors, loaderPresetMapper } from './loaderPresetsMapper';
-import { ButtonSizes, iconSizeMapper } from './iconSizeMapper';
+import { ButtonSize, iconSizeMapper } from './iconSizeMapper';
 const cx = cn.bind(styles);
 
 export interface RoundButtonProps {
   /**  Размер кнопки */
-  size?: ButtonSizes;
+  size?: ButtonSize;
   /**  В состоянии загрузке */
   loading?: boolean;
   /**  В состоянии disabled */
