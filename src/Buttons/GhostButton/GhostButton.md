@@ -20,13 +20,12 @@ import { GhostButton } from '@samokat/operations-ui'
 ```
 
 
-
-disabled=true
+Отключенная кнопка
 ```js
 <GhostButton disabled={true}>Войти</GhostButton>
 ```
 
-c иконкой
+c иконкой и текстом
 ```js
 import { Logout } from '@samokat/operations-icons';
 <GhostButton icon={Logout}>Выйти</GhostButton>
@@ -35,5 +34,5 @@ import { Logout } from '@samokat/operations-icons';
 только иконка
 ```js
 import { Logout } from '@samokat/operations-icons';
-<GhostButton icon={Logout}></GhostButton>
+<GhostButton icon={Logout} />
 ```

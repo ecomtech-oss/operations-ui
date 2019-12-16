@@ -24,17 +24,17 @@ import { People } from '@samokat/operations-icons';
 </div>
 ```
 
-fullWidth=true
+Кнопка, занимающая всю ширину родительского блока
 ```js
 <SecondaryButton size="large" fullWidth={true}>Отменить</SecondaryButton>
 ```
 
-disabled=true
+Отключенная кнопка
 ```js
 <SecondaryButton size="large" disabled={true}>Отменить</SecondaryButton>
 ```
 
-loading=true
+Кнопка, в состоянии загрузки
 ```js
 <SecondaryButton size="large" loading={true}>
   Отменить

@@ -20,17 +20,17 @@ import { PrimaryButton } from '@samokat/operations-ui'
 </div>
 ```
 
-fullWidth=true
+Кнопка, занимающая всю ширину родительского блока
 ```js
 <PrimaryButton size="large" fullWidth={true}>Войти</PrimaryButton>
 ```
 
-disabled=true
+Отключенная кнопка
 ```js
 <PrimaryButton size="large" disabled={true}>Войти</PrimaryButton>
 ```
 
-loading=true
+Кнопка, в состоянии загрузки
 ```js
 <PrimaryButton size="large" loading={true}>Войти</PrimaryButton>
 ```
