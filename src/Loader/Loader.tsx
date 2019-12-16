@@ -12,8 +12,6 @@ interface Props {
   opacity?: number;
   /** Размер */
   size?: 'small' | 'medium';
-
-  presets: typeof presets;
   /** Дополнительный класс */
   className?: string;
 }
