@@ -14,7 +14,6 @@
     "s": "yarn soda"
   },
   "dependencies": {
-    "@types/jest": "^24.0.23",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
@@ -28,6 +27,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.3",
     "@types/classnames": "^2.2.9",
+    "@types/jest": "^24.0.23",
     "@types/react": "^16.9.9",
     "autoprefixer": "^9.6.5",
     "css-loader": "^3.2.0",
