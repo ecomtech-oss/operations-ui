@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/samokat-oss/operations-ui/compare/v0.1.2...v0.2.0) (2019-12-19)
+
+
+### Bug Fixes
+
+* **notification:** fix default duraion ([1035a07](https://github.com/samokat-oss/operations-ui/commit/1035a07))
+
+
+### Features
+
+* **notifications:** add basic description of notificationds ([bd976a5](https://github.com/samokat-oss/operations-ui/commit/bd976a5))
+* **notifications:** add first implementation ([674e771](https://github.com/samokat-oss/operations-ui/commit/674e771))
+
+
+
 ### [0.1.2](https://github.com/samokat-oss/operations-ui/compare/v0.1.1...v0.1.2) (2019-12-16)
 
 
