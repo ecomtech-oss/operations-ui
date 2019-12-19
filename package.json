@@ -15,8 +15,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "nanoid": "^2.1.8",
-    "storeon": "^0.9.7"
+    "nanoid": "^2.1.8"
   },
   "peerDependencies": {
     "react": "^16.10.2",
