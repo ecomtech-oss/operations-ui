@@ -8,6 +8,7 @@ import { Text, Caption } from '../Typography';
 import Icon from '../Icon';
 import { store, State, Events } from './store';
 import * as styles from './Notifications.css';
+import * as actions from './actions';
 
 const cx = classNames.bind(styles);
 
@@ -67,3 +68,5 @@ export const Notifications = ({
     </StoreContext.Provider>
   );
 };
+
+Notifications.actions = actions;
