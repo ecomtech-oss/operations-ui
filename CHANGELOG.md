@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/samokat-oss/operations-ui/compare/v0.2.0...v0.2.1) (2019-12-19)
+
+
+### Bug Fixes
+
+* add miss export ([e3b080c](https://github.com/samokat-oss/operations-ui/commit/e3b080c))
+
+
+
 ## [0.2.0](https://github.com/samokat-oss/operations-ui/compare/v0.1.2...v0.2.0) (2019-12-19)
 
 
