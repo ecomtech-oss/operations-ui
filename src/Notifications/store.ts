@@ -12,7 +12,7 @@ export interface Events extends StoreonEvents<State> {
   remove: string;
 }
 
-const DEFAULT_DURATION = 400000;
+const DEFAULT_DURATION = 4000;
 
 export const notificationsModule: Module<State, Events> = appStore => {
   appStore.on('@init', () => ({ notifications: {} }));
@@ -33,7 +33,7 @@ export const notificationsModule: Module<State, Events> = appStore => {
       ),
   }));
 
-  // remove notification after duration
+  // remove notification after delay
   appStore.on('push', (_1, [id, _2, duration = DEFAULT_DURATION]) => {
     setTimeout(() => {
       appStore.dispatch('remove', id);
