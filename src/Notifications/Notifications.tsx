@@ -1,14 +1,12 @@
 import React from 'react';
-import useStoreon from 'storeon/react';
-import StoreContext from 'storeon/react/context';
 import classNames from 'classnames/bind';
 import { Cross } from '@samokat/operations-icons';
 
 import { Text, Caption } from '../Typography';
 import Icon from '../Icon';
-import { store, State, Events } from './store';
 import * as styles from './Notifications.css';
 import * as actions from './actions';
+import { useNotificationStore } from './useNotificationStore';
 
 const cx = classNames.bind(styles);
 
@@ -18,13 +16,15 @@ interface Props {
   withMargin?: boolean;
 }
 
-const EssentiallyNotifications = (props: Props) => {
-  const { notifications, dispatch } = useStoreon<State, Events>(
-    'notifications',
-  );
+export const Notifications = ({
+  vertical = 'top',
+  horizontal = 'right',
+  withMargin = false,
+}: Props) => {
+  const notifications = useNotificationStore();
 
-  const verticalClass = `vertical__${props.vertical}`;
-  const horizontalClass = `horizontal__${props.horizontal}`;
+  const verticalClass = `vertical__${vertical}`;
+  const horizontalClass = `horizontal__${horizontal}`;
 
   return (
     <section
@@ -32,17 +32,14 @@ const EssentiallyNotifications = (props: Props) => {
         'container',
         verticalClass,
         horizontalClass,
-        props.withMargin && 'margin',
+        withMargin && 'margin',
       )}
     >
       {Object.entries(notifications).map(([id, notification]) => (
         <article key={id} className={cx('notification')}>
           <Text className={cx('title')}>{notification.title}</Text>
           <Caption className={cx('text')}>{notification.text}</Caption>
-          <button
-            className={cx('close')}
-            onClick={() => dispatch('remove', id)}
-          >
+          <button className={cx('close')} onClick={() => actions.close(id)}>
             <Icon size="small" className={cx('cross')}>
               {Cross}
             </Icon>
@@ -50,22 +47,6 @@ const EssentiallyNotifications = (props: Props) => {
         </article>
       ))}
     </section>
-  );
-};
-
-export const Notifications = ({
-  vertical = 'top',
-  horizontal = 'right',
-  withMargin = false,
-}: Props) => {
-  return (
-    <StoreContext.Provider value={store}>
-      <EssentiallyNotifications
-        vertical={vertical}
-        horizontal={horizontal}
-        withMargin={withMargin}
-      />
-    </StoreContext.Provider>
   );
 };
 
