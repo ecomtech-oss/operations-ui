@@ -1,6 +1,6 @@
 module.exports = {
   preset: 'ts-jest',
-  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['src/**/{!(index),}.{ts,tsx}'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/'],
   moduleNameMapper: {
