@@ -9,7 +9,8 @@
     "build:lib": "gulp",
     "test": "jest",
     "test:watch": "jest --watch",
-    "ci": "yarn s lint",
+    "size": "yarn build:lib && size-limit",
+    "ci": "yarn s lint && yarn size",
     "prepare": "install-self-peers -- --ignore-scripts && yarn build:lib",
     "s": "yarn soda"
   },
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@samokat/operations-icons": "^1.0.0",
+    "@size-limit/preset-big-lib": "^2.2.3",
     "@solid-soda/scripts": "^1.14.7",
     "@team-griffin/install-self-peers": "^1.1.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -59,10 +61,15 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn soda lint-staged",
-      "pre-push": "yarn soda lint",
       "commit-msg": "yarn soda commitlint"
     }
   },
+  "size-limit": [
+    {
+      "limit": "20 kb",
+      "path": "dist/*.{js,css}"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   }
