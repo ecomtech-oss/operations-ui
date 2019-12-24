@@ -10,6 +10,6 @@ export {
   RoundButton,
 } from './Buttons';
 
-export { Modal, ModalContainer } from './Modal';
+export { Modal, ModalContainer, useModalState } from './Modal';
 
 export { Typography, Icon, Loader, Notifications };

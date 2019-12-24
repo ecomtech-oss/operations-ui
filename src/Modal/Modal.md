@@ -3,27 +3,27 @@
 1. Добавляй `ModalContainer`-компонент в корень своего приложения
 2. Используй `Modal`-компоненты в любом месте своего приложения
 
+Для управленеия состоянием модального окна можно использовать хук `useModalState`.
+
 #### Примеры
 
 ```js
-import { useState, useRef } from 'react'
-
-import { ModalContainer } from './ModalContainer'
+import { ModalContainer } from './internal/ModalContainer'
+import { useModalState } from './useModalState'
 
 const ModalExample = () => {
-  const [modelOpen, setModalOpen] = useState(false)
-  const containerRef = useRef()
+  const { isOpen, open, close } = useModalState()
 
   return (
     <>
       <ModalContainer />
       <Modal
-        open={modelOpen}
-        onDismiss={() => setModalOpen(false)}
+        open={isOpen}
+        onDismiss={close}
       >
         <p>Это модальное окно смотнитровалось через портал</p>
       </Modal>
-      <button onClick={() => setModalOpen(true)}>Открыть</button>
+      <button onClick={open}>Открыть</button>
     </>
   )
 }
