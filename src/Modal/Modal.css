@@ -1,0 +1,7 @@
+:global body {
+  overflow: auto;
+}
+
+:global body.modal-open {
+  overflow: hidden;
+}
