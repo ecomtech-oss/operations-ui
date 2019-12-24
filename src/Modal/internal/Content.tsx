@@ -1,8 +1,9 @@
-import React, { ReactNode, useRef, useLayoutEffect } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import classnames from 'classnames/bind';
 
 import { useOnDocumentKeyDown } from '../../utils/useOnDocumentKeyDown';
 import { useOnEventOutside } from '../../utils/useOnEventOutside';
+import { useLockBodyScroll } from './useLockBodyScroll';
 import * as styles from './Content.css';
 
 const cx = classnames.bind(styles);
@@ -23,19 +24,10 @@ export const Content = ({ children, onDismiss }: Props) => {
 
   useOnEventOutside(modalRef, 'mousedown', onDismiss);
   useLockBodyScroll();
+
   return (
     <div className={cx('content')} ref={modalRef}>
       {children}
     </div>
   );
-};
-
-export const useLockBodyScroll = () => {
-  useLayoutEffect(() => {
-    document.body.classList.add('modal-open');
-
-    return () => {
-      document.body.classList.remove('modal-open');
-    };
-  }, []);
 };

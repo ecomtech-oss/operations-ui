@@ -14,7 +14,7 @@ export function useOnEventOutside<E extends keyof DocumentEventMap>(
       return;
     }
 
-    return handler(event);
+    handler(event);
   };
 
   useLayoutEffect(() => {
