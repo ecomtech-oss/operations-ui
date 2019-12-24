@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/samokat-oss/operations-ui/compare/v0.2.3...v0.3.0) (2019-12-24)
+
+
+### Bug Fixes
+
+* **modal:** add miss style ([80c0de4](https://github.com/samokat-oss/operations-ui/commit/80c0de4))
+
+
+### Features
+
+* **modal:** add basic implementation of modals ([8dd8b1f](https://github.com/samokat-oss/operations-ui/commit/8dd8b1f))
+* **modal:** add focus lock for modals ([cd78289](https://github.com/samokat-oss/operations-ui/commit/cd78289))
+* **modal:** add lazy rendering for modal children ([b50e14a](https://github.com/samokat-oss/operations-ui/commit/b50e14a))
+* **modal:** improve modal api ([967169e](https://github.com/samokat-oss/operations-ui/commit/967169e))
+* **modal:** simplify api of modal ([169cc9a](https://github.com/samokat-oss/operations-ui/commit/169cc9a))
+
+
+
 ### [0.2.3](https://github.com/samokat-oss/operations-ui/compare/v0.2.2...v0.2.3) (2019-12-23)
 
 
