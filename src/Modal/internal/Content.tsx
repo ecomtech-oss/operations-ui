@@ -1,4 +1,5 @@
 import React, { ReactNode, useRef } from 'react';
+import FocusLock from 'react-focus-lock';
 import classnames from 'classnames/bind';
 
 import { useOnDocumentKeyDown } from '../../utils/useOnDocumentKeyDown';
@@ -26,8 +27,14 @@ export const Content = ({ children, onDismiss }: Props) => {
   useLockBodyScroll();
 
   return (
-    <div className={cx('content')} ref={modalRef}>
-      {children}
-    </div>
+    <FocusLock>
+      {/*
+        Content container is tabable (due to tabIndex={0}).
+        In this case, if we have no tabable elements inside, focus will be trapped anyway.
+      */}
+      <div role="dialog" tabIndex={0} className={cx('content')} ref={modalRef}>
+        {children}
+      </div>
+    </FocusLock>
   );
 };
