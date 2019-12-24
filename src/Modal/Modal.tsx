@@ -6,7 +6,7 @@ import './Modal.css';
 
 interface Props {
   /** Содержимое модального окна */
-  children: ReactNode;
+  children: ReactNode | (() => ReactNode);
   /** Открыто ли окно? */
   open: boolean;
   /** Колбэк, вызывается при нажатии на Escape или клике на оверлей */

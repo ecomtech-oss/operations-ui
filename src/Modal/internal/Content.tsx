@@ -10,7 +10,7 @@ import * as styles from './Content.css';
 const cx = classnames.bind(styles);
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode | (() => ReactNode);
   onDismiss: () => void;
 }
 
@@ -26,6 +26,9 @@ export const Content = ({ children, onDismiss }: Props) => {
   useOnEventOutside(modalRef, 'mousedown', onDismiss);
   useLockBodyScroll();
 
+  const renderedChildren =
+    typeof children === 'function' ? children() : children;
+
   return (
     <FocusLock>
       {/*
@@ -33,7 +36,7 @@ export const Content = ({ children, onDismiss }: Props) => {
         In this case, if we have no tabable elements inside, focus will be trapped anyway.
       */}
       <div role="dialog" tabIndex={0} className={cx('content')} ref={modalRef}>
-        {children}
+        {renderedChildren}
       </div>
     </FocusLock>
   );
