@@ -5,15 +5,17 @@ import { Content } from './internal/Content';
 import './Modal.css';
 
 interface Props {
-  open: boolean;
+  /** Содержимое модального окна */
   children: ReactNode;
+  /** Открыто ли окно? */
+  open: boolean;
+  /** Колбэк, вызывается при нажатии на Escape или клике на оверлей */
   onDismiss: () => void;
-  container: Element | string | null;
 }
 
-export const Modal = ({ open, children, onDismiss, container }: Props) => {
+export const Modal = ({ open, children, onDismiss }: Props) => {
   return (
-    <Overlay open={open} container={container}>
+    <Overlay open={open}>
       {open && <Content onDismiss={onDismiss}>{children}</Content>}
     </Overlay>
   );

@@ -3,35 +3,26 @@ import { createPortal } from 'react-dom';
 import classnames from 'classnames/bind';
 
 import * as styles from './Overlay.css';
+import { CONTAINER_ID } from '../ModalContainer';
 
 const cx = classnames.bind(styles);
 
 interface Props {
   open: boolean;
   children: ReactNode;
-  container: Element | string | null;
 }
 
-export const Overlay = ({ open, children, container }: Props) => {
+export const Overlay = ({ open, children }: Props) => {
   if (!open) {
     return null;
   }
 
+  const container = document.getElementById(CONTAINER_ID);
   const element = <div className={cx('overlay')}>{children}</div>;
 
   if (!container) {
     return element;
   }
 
-  if (typeof container !== 'string') {
-    return createPortal(element, container);
-  }
-
-  const realContainer = document.getElementById(container);
-
-  if (!realContainer) {
-    return element;
-  }
-
-  return createPortal(element, realContainer);
+  return createPortal(element, container);
 };
