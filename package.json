@@ -1,6 +1,6 @@
 {
   "name": "@samokat/operations-ui",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -9,14 +9,15 @@
     "build:lib": "gulp",
     "test": "jest",
     "test:watch": "jest --watch",
-    "ci": "yarn s lint",
+    "size": "yarn build:lib && size-limit",
+    "ci": "yarn s lint && yarn test --coverage && yarn size",
     "prepare": "install-self-peers -- --ignore-scripts && yarn build:lib",
     "s": "yarn soda"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "nanoid": "^2.1.8",
-    "storeon": "^0.9.7"
+    "react-focus-lock": "^2.2.1"
   },
   "peerDependencies": {
     "react": "^16.10.2",
@@ -24,15 +25,18 @@
   },
   "devDependencies": {
     "@samokat/operations-icons": "^1.0.0",
-    "@solid-soda/scripts": "^1.14.7",
+    "@size-limit/preset-big-lib": "^2.2.3",
+    "@solid-soda/scripts": "^1.15.1",
     "@team-griffin/install-self-peers": "^1.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.3",
+    "@testing-library/react-hooks": "^3.2.1",
     "@types/classnames": "^2.2.9",
     "@types/jest": "^24.0.23",
     "@types/nanoid": "^2.1.0",
     "@types/react": "^16.9.9",
     "autoprefixer": "^9.6.5",
+    "codecov": "^3.6.1",
     "css-loader": "^3.2.0",
     "fs-extra": "^8.1.0",
     "gulp": "^4.0.2",
@@ -49,6 +53,7 @@
     "postcss-nested": "^4.2.1",
     "react-docgen-typescript": "^1.16.1",
     "react-styleguidist": "^10.2.1",
+    "react-test-renderer": "^16.12.0",
     "rxjs": "^6.5.3",
     "style-loader": "^1.0.0",
     "ts-jest": "^24.2.0",
@@ -58,10 +63,15 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn soda lint-staged",
-      "pre-push": "yarn soda lint",
       "commit-msg": "yarn soda commitlint"
     }
   },
+  "size-limit": [
+    {
+      "limit": "20 kb",
+      "path": "dist/*.{js,css}"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   }

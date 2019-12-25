@@ -47,13 +47,16 @@ export const GhostButton = forwardRef<HTMLButtonElement, Props>(
       >
         {icon && (
           <Icon
-            children={icon}
             size={size}
             className={cx('icon', { 'right-space': hasChildren })}
-          />
+          >
+            {icon}
+          </Icon>
         )}
         <TextComponent>{children}</TextComponent>
       </button>
     );
   },
 );
+
+GhostButton.displayName = 'GhostButton';

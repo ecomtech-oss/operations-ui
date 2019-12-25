@@ -43,7 +43,7 @@ module.exports = {
         },
         {
           name: 'Mega',
-          components: 'src/{Notifications,Something}/[A-Z]*.tsx',
+          components: 'src/{Notifications,Modal}/[A-Z]*.tsx',
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },
