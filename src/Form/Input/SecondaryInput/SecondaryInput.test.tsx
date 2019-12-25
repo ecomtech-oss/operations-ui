@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { Search } from '@samokat/operations-icons';
+
 import { SecondaryInput } from './SecondaryInput';
 
 describe('SecondaryInput', () => {
@@ -36,8 +37,6 @@ describe('SecondaryInput', () => {
     const { container } = render(<SecondaryInput errorText={errorText} />);
     expect(container).toHaveTextContent(errorText);
   });
-
-  test('clear button hide by default', () => {});
 
   test('clear button onclick', () => {
     const changeEvent = jest.fn();

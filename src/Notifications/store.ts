@@ -1,4 +1,5 @@
 import createStore, { StoreonEvents, Module } from 'storeon';
+
 import { NotificationModel } from './NotificationModel';
 
 export interface State {

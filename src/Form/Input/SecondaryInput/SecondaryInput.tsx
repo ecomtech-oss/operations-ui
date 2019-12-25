@@ -1,12 +1,10 @@
 import React, { forwardRef, Ref, MouseEvent } from 'react';
-
 import classNames from 'classnames/bind';
 
 import { useCombinedRefs } from '../../../hooks/useCombinedRef';
 import { mouseEventToChangeEvent } from '../helpers/mouseEventToChangeEvent';
 import Icon, { IconElement } from '../../../Icon';
 import * as Typography from '../../../Typography';
-
 import { ErrorText } from '../../ErrorText';
 import { placeholderHack } from '../internal/constants';
 import { InputProps } from '../internal/types';

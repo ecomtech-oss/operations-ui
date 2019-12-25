@@ -6,10 +6,10 @@
   margin: 0;
   text-align: center;
   cursor: pointer;
+  background: none;
   border: none;
   outline: none;
   box-shadow: none;
-  background: none;
 
   &::-moz-focus-inner {
     border: 0;

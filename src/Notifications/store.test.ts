@@ -1,4 +1,5 @@
 import createStore, { Store } from 'storeon';
+
 import { notificationsModule, State, Events } from './store';
 
 describe('notification store', () => {

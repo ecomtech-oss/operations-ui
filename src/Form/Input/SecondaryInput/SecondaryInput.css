@@ -16,8 +16,8 @@
   padding-right: 30px;
   background-color: var(--grey-3);
   border: none;
-  outline: none;
   border-radius: 6px;
+  outline: none;
   transition: background-color 0.2s, box-shadow 0.2s;
   &::placeholder {
     color: var(--grey-1);
@@ -68,10 +68,10 @@
 }
 
 .clear-button {
-  display: none;
   position: absolute;
   top: 8px;
   right: 8px;
+  display: none;
 }
 
 .error,
