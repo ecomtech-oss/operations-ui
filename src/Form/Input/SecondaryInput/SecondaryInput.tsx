@@ -40,12 +40,14 @@ export const SecondaryInput = forwardRef(
     }: InputProps<SecondaryInputProps>,
     ref: Ref<HTMLInputElement>,
   ) => {
+    const internalRef = useCombinedRefs<HTMLInputElement>(ref);
+
     const hasError = Boolean(errorText);
     const hasLeftIcon = Boolean(icon);
-    const iternalRef = useCombinedRefs<HTMLInputElement>(ref);
     const textSize = textSizeMapper[size];
+
     const handleClear = (e: MouseEvent<HTMLButtonElement>) => {
-      const input = iternalRef.current;
+      const input = internalRef.current;
       const event = mouseEventToChangeEvent(input, e);
       input.value = '';
       input.focus();
@@ -67,7 +69,7 @@ export const SecondaryInput = forwardRef(
           </Icon>
         )}
         <input
-          ref={iternalRef}
+          ref={internalRef}
           {...inputProps}
           placeholder={placeholder}
           className={cx('input', size, {

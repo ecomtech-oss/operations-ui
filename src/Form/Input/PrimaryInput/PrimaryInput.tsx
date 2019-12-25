@@ -11,12 +11,10 @@ const cx = classNames.bind(styles);
 
 type PrimaryInputProps = {
   /**  плавающий лейбл */
-
   label?: string;
-  /**  ошибка */
+  /**  текст ошибки */
   errorText?: string;
   /**  дополнительный класс */
-
   className?: string;
 };
 
