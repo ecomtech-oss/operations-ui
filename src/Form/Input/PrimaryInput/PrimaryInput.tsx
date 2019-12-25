@@ -10,11 +10,13 @@ import * as styles from './PrimaryInput.css';
 const cx = classNames.bind(styles);
 
 type PrimaryInputProps = {
-  /**  плавающий лейбл */
+  /** Текст плавающего лейбла, если не передан то лейбл не показывается. */
   label?: string;
-  /**  текст ошибки */
+
+  /** Текст ошибки */
   errorText?: string;
-  /**  дополнительный класс */
+
+  /** Дополнительный класс */
   className?: string;
 };
 

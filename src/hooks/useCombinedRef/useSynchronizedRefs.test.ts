@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useSynchronizedRefs } from './useSynchronizedRefs';
 import { useRef } from 'react';
+
+import { useSynchronizedRefs } from './useSynchronizedRefs';
 
 describe('useCombinedRef', () => {
   const mockObject = { data: 1 };

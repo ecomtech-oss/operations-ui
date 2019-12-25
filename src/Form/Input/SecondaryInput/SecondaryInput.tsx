@@ -15,14 +15,18 @@ import * as styles from './SecondaryInput.css';
 const cx = classNames.bind(styles);
 
 type SecondaryInputProps = {
-  /**  Размер кнопки */
+  /** Размер кнопки */
   size?: Size;
-  /**  иконка слева */
+
+  /** Иконка слева */
   icon?: IconElement | null;
-  /**  ошибка */
+
+  /** Ошибка */
   errorText?: string;
-  /**  дополнительный класс */
+
+  /** Дополнительный класс */
   className?: string;
+
   /** Эвент, вызывающий при нажатия на ClearButton*/
   onClear?(): void;
 };
