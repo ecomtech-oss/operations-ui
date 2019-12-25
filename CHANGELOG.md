@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/samokat-oss/operations-ui/compare/v0.0.2...v0.4.0) (2019-12-25)
+
+
+### Bug Fixes
+
+* **base border radius:** move to css variable ([3d9b638](https://github.com/samokat-oss/operations-ui/commit/3d9b638))
+* **icon:** modules ([5a15e7e](https://github.com/samokat-oss/operations-ui/commit/5a15e7e))
+* **icon:** remove default import ([feb9ddf](https://github.com/samokat-oss/operations-ui/commit/feb9ddf))
+* **loader:** presets as static ([a4752cc](https://github.com/samokat-oss/operations-ui/commit/a4752cc))
+* **loader:** presets import ([b847d7d](https://github.com/samokat-oss/operations-ui/commit/b847d7d))
+* **modal:** add miss style ([80c0de4](https://github.com/samokat-oss/operations-ui/commit/80c0de4))
+* **notification:** fix default duraion ([1035a07](https://github.com/samokat-oss/operations-ui/commit/1035a07))
+* **notification:** fix specifity of css notifications ([dc2c549](https://github.com/samokat-oss/operations-ui/commit/dc2c549))
+* **primary input:** fix typo ([8201c32](https://github.com/samokat-oss/operations-ui/commit/8201c32))
+* add miss export ([e3b080c](https://github.com/samokat-oss/operations-ui/commit/e3b080c))
+* security fixes ([c9c0aab](https://github.com/samokat-oss/operations-ui/commit/c9c0aab))
+
+
+### Features
+
+* **button:** different ui state ([a4dc11d](https://github.com/samokat-oss/operations-ui/commit/a4dc11d))
+* **button:** round button ([02160d5](https://github.com/samokat-oss/operations-ui/commit/02160d5))
+* **buttons:** ghost button ([e0a1153](https://github.com/samokat-oss/operations-ui/commit/e0a1153))
+* **buttons:** initial ([4cd4a58](https://github.com/samokat-oss/operations-ui/commit/4cd4a58))
+* **buttons:** primary and secondary ([ee5fb3e](https://github.com/samokat-oss/operations-ui/commit/ee5fb3e))
+* **buttons:** rounded ([ceb6fc7](https://github.com/samokat-oss/operations-ui/commit/ceb6fc7))
+* **form:** error text component ([0f8962d](https://github.com/samokat-oss/operations-ui/commit/0f8962d))
+* **form:** primary input ([c428dbd](https://github.com/samokat-oss/operations-ui/commit/c428dbd))
+* **form:** secondary input ([a01cac3](https://github.com/samokat-oss/operations-ui/commit/a01cac3))
+* **icon:** abstract icon component ([8201fb5](https://github.com/samokat-oss/operations-ui/commit/8201fb5))
+* **loader:** loader component ([48a3c07](https://github.com/samokat-oss/operations-ui/commit/48a3c07))
+* **loader:** new customization way ([bcbe057](https://github.com/samokat-oss/operations-ui/commit/bcbe057))
+* **modal:** add basic implementation of modals ([8dd8b1f](https://github.com/samokat-oss/operations-ui/commit/8dd8b1f))
+* **modal:** add focus lock for modals ([cd78289](https://github.com/samokat-oss/operations-ui/commit/cd78289))
+* **modal:** add lazy rendering for modal children ([b50e14a](https://github.com/samokat-oss/operations-ui/commit/b50e14a))
+* **modal:** improve modal api ([967169e](https://github.com/samokat-oss/operations-ui/commit/967169e))
+* **modal:** simplify api of modal ([169cc9a](https://github.com/samokat-oss/operations-ui/commit/169cc9a))
+* **notifications:** add basic description of notificationds ([bd976a5](https://github.com/samokat-oss/operations-ui/commit/bd976a5))
+* **notifications:** add first implementation ([674e771](https://github.com/samokat-oss/operations-ui/commit/674e771))
+* **use combined ref hook:** custom hook for multiple refs ([af3fae6](https://github.com/samokat-oss/operations-ui/commit/af3fae6))
+
+
+### Tests
+
+* **button:** abstract test suite for button ([4261422](https://github.com/samokat-oss/operations-ui/commit/4261422))
+* **button:** initial setup for jest and buttons testing ([0d4318d](https://github.com/samokat-oss/operations-ui/commit/0d4318d))
+* **use synchronized refs:** test suite ([7aa8925](https://github.com/samokat-oss/operations-ui/commit/7aa8925))
+
+
+
 ## [0.3.0](https://github.com/samokat-oss/operations-ui/compare/v0.2.3...v0.3.0) (2019-12-24)
 
 
