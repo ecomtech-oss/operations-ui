@@ -1,0 +1,17 @@
+.button {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}

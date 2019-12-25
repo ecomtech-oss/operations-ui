@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  &:hover {
+    & > .input:not(:disabled) {
+      &:not(:placeholder-shown) + .clear-button {
+        display: block;
+      }
+    }
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 12px;
+  padding-right: 30px;
+  background-color: var(--grey-3);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  &::placeholder {
+    color: var(--grey-1);
+  }
+
+  &:hover {
+    background-color: var(--grey-3);
+    box-shadow: inset 0 0 0 1px rgba(196, 204, 212, 0.5);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px rgba(196, 204, 212, 0.5);
+    &::placeholder {
+      color: rgba(143, 153, 163, 0.5);
+    }
+
+    &:not(:placeholder-shown) + .clear-button {
+      display: block;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &.left-padding {
+    padding-left: 30px;
+  }
+}
+
+.medium {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.003em;
+}
+
+.small {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.003em;
+}
+
+.icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  pointer-events: none;
+}
+
+.clear-button {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.error,
+.error:hover {
+  box-shadow: inset 0 0 0 1px var(--red);
+}
+
+.error:focus {
+  box-shadow: inset 0 0 0 1px rgba(196, 204, 212, 0.5);
+}
+
+.error-text {
+  padding-left: 12px;
+  margin-top: 2px;
+}
+
+.error:focus ~ .error-text {
+  display: none;
+}
