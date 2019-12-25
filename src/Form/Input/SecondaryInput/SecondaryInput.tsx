@@ -1,7 +1,7 @@
 import React, { forwardRef, Ref, MouseEvent } from 'react';
 import classNames from 'classnames/bind';
 
-import { useCombinedRefs } from '../../../hooks/useCombinedRef';
+import { useSynchronizedRefs } from '../../../hooks/useCombinedRef';
 import { mouseEventToChangeEvent } from '../helpers/mouseEventToChangeEvent';
 import Icon, { IconElement } from '../../../Icon';
 import * as Typography from '../../../Typography';
@@ -40,7 +40,7 @@ export const SecondaryInput = forwardRef(
     }: InputProps<SecondaryInputProps>,
     ref: Ref<HTMLInputElement>,
   ) => {
-    const internalRef = useCombinedRefs<HTMLInputElement>(ref);
+    const internalRef = useSynchronizedRefs<HTMLInputElement>(ref);
 
     const hasError = Boolean(errorText);
     const hasLeftIcon = Boolean(icon);

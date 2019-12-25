@@ -1,6 +1,8 @@
-import { useRef, useEffect, Ref, RefObject, MutableRefObject } from 'react';
+import { useRef, useEffect, Ref, MutableRefObject } from 'react';
 
-export const useCombinedRefs = <T>(...refs: Ref<T>[]): RefObject<T> => {
+export const useSynchronizedRefs = <T>(
+  ...refs: Ref<T>[]
+): MutableRefObject<T> => {
   const externalRef = useRef<T>();
   const targetRef = useRef<T>();
   refs.push(externalRef);

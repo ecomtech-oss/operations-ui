@@ -1,1 +1,1 @@
-export { useCombinedRefs } from './useCombinedRef';
+export { useSynchronizedRefs } from './useSynchronizedRefs';
