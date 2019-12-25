@@ -1,11 +1,7 @@
 .wrapper {
   position: relative;
-  &:hover {
-    & > .input:not(:disabled) {
-      &:not(:placeholder-shown) + .clear-button {
-        display: block;
-      }
-    }
+  &:hover > .input:not(:disabled)&:not(:placeholder-shown) + .clear-button {
+    display: block;
   }
 }
 
@@ -16,7 +12,7 @@
   padding-right: 30px;
   background-color: var(--grey-3);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--base-border-radius);
   outline: none;
   transition: background-color 0.2s, box-shadow 0.2s;
   &::placeholder {
