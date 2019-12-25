@@ -80,24 +80,22 @@ export const IternalButton = forwardRef<HTMLButtonElement, IternalButtonProps>(
         )}
         <div className={cx('content', { hide: loading })}>
           {leftIcon && (
-            <Icon
-              children={leftIcon}
-              size={iconSize}
-              className={cx('icon', 'start-icon')}
-            />
+            <Icon size={iconSize} className={cx('icon', 'start-icon')}>
+              {leftIcon}
+            </Icon>
           )}
           <Text size={textSize} className={cx('text')}>
             {children}
           </Text>
           {rightIcon && (
-            <Icon
-              children={rightIcon}
-              size={iconSize}
-              className={cx('icon', 'end-icon')}
-            />
+            <Icon size={iconSize} className={cx('icon', 'end-icon')}>
+              {rightIcon}
+            </Icon>
           )}
         </div>
       </button>
     );
   },
 );
+
+IternalButton.displayName = 'IternalButton';

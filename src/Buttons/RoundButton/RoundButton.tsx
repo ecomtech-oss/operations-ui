@@ -64,12 +64,12 @@ export const RoundButton = forwardRef<
             <Loader {...loaderPreset} />
           </div>
         )}
-        <Icon
-          children={icon}
-          size={iconSize}
-          className={cx('icon', { hide: loading })}
-        />
+        <Icon size={iconSize} className={cx('icon', { hide: loading })}>
+          {icon}
+        </Icon>
       </button>
     );
   },
 );
+
+RoundButton.displayName = 'RoundButton';
