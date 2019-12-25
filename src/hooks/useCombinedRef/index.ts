@@ -1,0 +1,1 @@
+export { useSynchronizedRefs } from './useSynchronizedRefs';

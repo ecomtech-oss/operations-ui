@@ -55,7 +55,7 @@
   width: 214px;
   padding: 16px;
   background-color: var(--primary);
-  border-radius: 6px;
+  border-radius: var(--base-border-radius);
 
   & > .title {
     margin: 0;

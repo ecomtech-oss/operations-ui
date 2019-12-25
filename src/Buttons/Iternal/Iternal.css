@@ -21,7 +21,7 @@
   padding: 15px 12px;
   font-size: 15px;
   line-height: 18px;
-  border-radius: 6px;
+  border-radius: var(--base-border-radius);
 }
 
 .primary {

@@ -10,6 +10,7 @@ export {
   RoundButton,
 } from './Buttons';
 
+export { ErrorText, PrimaryInput, SecondaryInput } from './Form';
 export { Modal, ModalContainer, useModalState } from './Modal';
 
 export { Typography, Icon, Loader, Notifications };
