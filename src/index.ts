@@ -10,4 +10,6 @@ export {
   RoundButton,
 } from './Buttons';
 
+export { ErrorText, PrimaryInput, SecondaryInput } from './Form';
+
 export { Typography, Icon, Loader, Notifications };

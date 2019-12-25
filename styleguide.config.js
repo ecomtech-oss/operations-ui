@@ -35,6 +35,13 @@ module.exports = {
           usageMode: 'collapse',
         },
         {
+          name: 'Forms',
+          content: 'src/Form/Form.md',
+          components: 'src/Form/**/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
+        {
           name: 'Mega',
           components: 'src/{Notifications,Something}/[A-Z]*.tsx',
           exampleMode: 'collapse',
