@@ -6,26 +6,31 @@ import Icon, { IconElement } from '../../Icon';
 import { Text } from '../../Typography';
 import { BaseButtonsProps } from '../Base';
 import * as baseStyles from '../Base.css';
-import * as iternalStyles from './Iternal.css';
+import * as iternalStyles from './Internal.css';
 import { iconSizeMapper } from './iconSizeMapper';
 import { ButtonSize } from './types';
 import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
 import { textSizeMapper } from './textSizeMapper';
 const cx = cn.bind(iternalStyles);
 export interface ExternalButtonPropsInner {
-  /**  Размер кнопки */
+  /** Размер кнопки */
   size?: ButtonSize;
-  /**  Кнопка принимает ширину родителя */
+
+  /** Кнопка принимает ширину родителя */
   fullWidth?: boolean;
-  /**  В состоянии загрузке */
+
+  /** В состоянии загрузке */
   loading?: boolean;
-  /**  В состоянии disabled */
+
+  /** В состоянии disabled */
   disabled?: boolean;
-  /**  Иконка слева */
+
+  /** Иконка слева */
   leftIcon?: IconElement | null;
 
-  /**  Иконка справа */
+  /** Иконка справа */
   rightIcon?: IconElement | null;
+
   /** Дополнительный класс */
   className?: string;
 }

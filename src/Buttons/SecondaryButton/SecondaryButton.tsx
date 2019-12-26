@@ -4,7 +4,7 @@ import {
   IternalButton,
   ExternalButtonProps,
   IternalButtonProps,
-} from '../Iternal/Iternal';
+} from '../Internal/Internal';
 
 export const SecondaryButton: FC<ExternalButtonProps> = forwardRef<
   HTMLButtonElement,
