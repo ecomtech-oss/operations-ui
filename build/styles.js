@@ -38,7 +38,7 @@ const styles = destination => {
   );
 
   const compileCss = () =>
-    src('./src/**/*.css')
+    src('./src/*.css')
       .pipe(
         postcss(
           [
