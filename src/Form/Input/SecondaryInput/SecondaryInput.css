@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  &:hover > .input:not(:disabled)&:not(:placeholder-shown) + .clear-button {
+  &:hover > .input:not(:disabled):not(:placeholder-shown) + .clear-button {
     display: block;
   }
 }

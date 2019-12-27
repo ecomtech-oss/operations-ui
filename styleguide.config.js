@@ -1,8 +1,11 @@
+const path = require('path');
+
 module.exports = {
   defaultExample: true,
   propsParser: require('react-docgen-typescript').withDefaultConfig({
     savePropValueAsString: true,
   }).parse,
+  require: [path.join(__dirname, 'src/variables.css')],
   title: 'Samokat Operations UI kit',
   skipComponentsWithoutExample: true,
   sections: [
