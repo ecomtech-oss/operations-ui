@@ -6,7 +6,7 @@ import Icon, { IconElement } from '../../Icon';
 import { Text } from '../../Typography';
 import { BaseButtonsProps } from '../Base';
 import baseStyles from '../Base.css';
-import * as iternalStyles from './Iternal.css';
+import iternalStyles from './Iternal.css';
 import { iconSizeMapper } from './iconSizeMapper';
 import { ButtonSize } from './types';
 import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
@@ -57,7 +57,6 @@ export const IternalButton = forwardRef<HTMLButtonElement, IternalButtonProps>(
     const loaderPreset = loaderPresetsMapper[color];
     const iconSize = iconSizeMapper[size];
     const textSize = textSizeMapper[size];
-
     const isDisabled = loading || disabled;
 
     return (
