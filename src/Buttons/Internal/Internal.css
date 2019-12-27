@@ -1,4 +1,3 @@
-@import '../../variables.css';
 
 .small {
   height: 32px;
@@ -30,6 +29,7 @@
   background-color: var(--primary);
   transition: background-color 0.2s;
 
+
   .content {
     color: var(--white);
   }
@@ -37,6 +37,7 @@
   .text {
     color: currentColor;
   }
+
 }
 
 .primary:hover {

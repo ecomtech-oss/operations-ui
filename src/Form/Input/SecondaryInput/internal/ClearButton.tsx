@@ -1,7 +1,7 @@
 import React, { MouseEvent } from 'react';
 import cn from 'classnames/bind';
 
-import * as styles from './ClearButton.css';
+import styles from './ClearButton.css';
 
 const cx = cn.bind(styles);
 

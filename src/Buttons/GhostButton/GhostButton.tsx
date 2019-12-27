@@ -4,8 +4,8 @@ import cn from 'classnames/bind';
 import Icon, { IconElement } from '../../Icon';
 import { BaseButtonsProps } from '../Base';
 import { Text, Caption } from '../../Typography';
-import * as baseStyles from '../Base.css';
-import * as styles from './GhostButton.css';
+import baseStyles from '../Base.css';
+import styles from './GhostButton.css';
 
 interface GhostProps {
   /**  Размер кнопки */

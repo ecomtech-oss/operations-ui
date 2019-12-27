@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import classnames from 'classnames/bind';
 
-import * as styles from './Overlay.css';
+import styles from './Overlay.css';
 import { CONTAINER_ID } from './ModalContainer';
 
 const cx = classnames.bind(styles);

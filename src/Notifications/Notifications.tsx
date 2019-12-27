@@ -4,7 +4,7 @@ import { Cross } from '@samokat/operations-icons';
 
 import { Text, Caption } from '../Typography';
 import Icon from '../Icon';
-import * as styles from './Notifications.css';
+import styles from './Notifications.css';
 import * as actions from './actions';
 import { useNotificationStore } from './useNotificationStore';
 
