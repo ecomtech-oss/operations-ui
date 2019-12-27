@@ -28,12 +28,8 @@
   background-color: var(--primary);
   transition: background-color 0.2s;
 
-  .content {
-    color: var(--white);
-  }
-
   .text {
-    color: currentColor;
+    color: var(--white);
   }
 }
 

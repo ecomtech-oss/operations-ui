@@ -6,7 +6,7 @@ import Icon, { IconElement } from '../../Icon';
 import { Text } from '../../Typography';
 import { BaseButtonsProps } from '../Base';
 import baseStyles from '../Base.css';
-import iternalStyles from './Iternal.css';
+import iternalStyles from './Internal.css';
 import { iconSizeMapper } from './iconSizeMapper';
 import { ButtonSize } from './types';
 import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
