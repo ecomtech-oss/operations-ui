@@ -1,3 +1,4 @@
+
 .small {
   height: 32px;
   padding: 8px 12px;
@@ -28,9 +29,15 @@
   background-color: var(--primary);
   transition: background-color 0.2s;
 
-  .text {
+
+  .content {
     color: var(--white);
   }
+
+  .text {
+    color: currentColor;
+  }
+
 }
 
 .primary:hover {

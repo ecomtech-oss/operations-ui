@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/samokat-oss/operations-ui/compare/v0.4.0...v0.4.2) (2019-12-26)
+
+
+### Bug Fixes
+
+* **button:** primary button icon color ([2791ce0](https://github.com/samokat-oss/operations-ui/commit/2791ce0))
+
+
+
 ## [0.4.0](https://github.com/samokat-oss/operations-ui/compare/v0.0.2...v0.4.0) (2019-12-25)
 
 

@@ -18,7 +18,7 @@ import Icon from '../../Icon';
 import { People } from '@samokat/operations-icons';
 
 <div style={{ width: '400px', display: 'flex', justifyContent: 'space-between' }}>
-  <SecondaryButton size="large" startIcon={People}>Назад</SecondaryButton>
+  <SecondaryButton size="large" leftIcon={People}>Назад</SecondaryButton>
   <SecondaryButton size="medium">Отменить</SecondaryButton>
   <SecondaryButton size="small">Отменить</SecondaryButton>
 </div>

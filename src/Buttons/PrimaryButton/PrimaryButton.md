@@ -13,8 +13,10 @@ import { PrimaryButton } from '@samokat/operations-ui'
 
 Размеры: large, medium, small
 ```js
+import { People } from '@samokat/operations-icons';
+
 <div style={{ width: '300px', display: 'flex', justifyContent: 'space-between' }}>
-  <PrimaryButton size="large">Войти</PrimaryButton>
+  <PrimaryButton size="large"  leftIcon={People}>Войти</PrimaryButton>
   <PrimaryButton size="medium">Войти</PrimaryButton>
   <PrimaryButton size="small">Войти</PrimaryButton>
 </div>
