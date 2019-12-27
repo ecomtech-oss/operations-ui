@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames/bind';
 
-import * as styles from './Icon.css';
+import styles from './Icon.css';
 
 export type IconElement = (props: { className: string }) => JSX.Element;
 export type IconSize = 'small' | 'medium';

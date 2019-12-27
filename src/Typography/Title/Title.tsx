@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 
 import { Typography } from '../internal/Typography';
-import * as styles from './Title.css';
+import styles from './Title.css';
 
 const cx = classnames.bind(styles);
 

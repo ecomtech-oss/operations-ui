@@ -5,7 +5,7 @@ import * as Typography from '../../../Typography';
 import { ErrorText } from '../../ErrorText';
 import { placeholderHack } from '../internal/constants';
 import { InputProps } from '../internal/types';
-import * as styles from './PrimaryInput.css';
+import styles from './PrimaryInput.css';
 
 const cx = classNames.bind(styles);
 

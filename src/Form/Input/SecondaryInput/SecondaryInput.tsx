@@ -10,7 +10,7 @@ import { placeholderHack } from '../internal/constants';
 import { InputProps } from '../internal/types';
 import { ClearButton } from './internal/ClearButton';
 import { Size, textSizeMapper } from './textSizeMapper';
-import * as styles from './SecondaryInput.css';
+import styles from './SecondaryInput.css';
 
 const cx = classNames.bind(styles);
 

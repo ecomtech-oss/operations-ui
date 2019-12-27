@@ -5,7 +5,7 @@ import Loader from '../../Loader';
 import Icon, { IconElement } from '../../Icon';
 import { Text } from '../../Typography';
 import { BaseButtonsProps } from '../Base';
-import * as baseStyles from '../Base.css';
+import baseStyles from '../Base.css';
 import * as iternalStyles from './Iternal.css';
 import { iconSizeMapper } from './iconSizeMapper';
 import { ButtonSize } from './types';

@@ -5,7 +5,7 @@ import classnames from 'classnames/bind';
 import { useOnDocumentKeyDown } from '../../utils/useOnDocumentKeyDown';
 import { useOnEventOutside } from '../../utils/useOnEventOutside';
 import { useLockBodyScroll } from './useLockBodyScroll';
-import * as styles from './Content.css';
+import styles from './Content.css';
 
 const cx = classnames.bind(styles);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames/bind';
 
-import * as styles from './Loader.css';
+import styles from './Loader.css';
 import * as presets from './presets';
 
 const cx = cn.bind(styles);
