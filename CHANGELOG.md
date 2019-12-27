@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/samokat-oss/operations-ui/compare/v0.4.3...v0.4.4) (2019-12-27)
+
+
+### Bug Fixes
+
+* **input:** show clear button on hover ([caafe6a](https://github.com/samokat-oss/operations-ui/commit/caafe6a))
+
+
+
 ### [0.4.3](https://github.com/samokat-oss/operations-ui/compare/v0.4.2...v0.4.3) (2019-12-27)
 
 
