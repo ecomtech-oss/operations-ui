@@ -9,10 +9,12 @@ export default {
   },
   external: [
     'react',
-    'classnames/bind',
-    'nanoid',
-    'react-focus-lock',
     'react-dom',
+    'react-focus-lock',
+    'react-hook-form',
+    'classnames/bind',
+    'react-input-mask',
+    'nanoid',
     '@samokat/operations-icons',
   ],
 

@@ -17,7 +17,9 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "nanoid": "^2.1.8",
-    "react-focus-lock": "^2.2.1"
+    "react-focus-lock": "^2.2.1",
+    "react-hook-form": "^4.2.1",
+    "react-input-mask": "https://github.com/vladmelnikov/react-input-mask"
   },
   "peerDependencies": {
     "react": "^16.10.2",
@@ -53,6 +55,7 @@
     "postcss-modules": "^1.4.1",
     "postcss-nested": "^4.2.1",
     "react-docgen-typescript": "^1.16.1",
+    "react-frame-component": "^4.1.1",
     "react-styleguidist": "^10.2.1",
     "react-test-renderer": "^16.12.0",
     "rimraf": "^3.0.0",
