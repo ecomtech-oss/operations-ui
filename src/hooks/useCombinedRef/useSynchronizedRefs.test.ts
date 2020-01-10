@@ -19,22 +19,24 @@ describe('useCombinedRef', () => {
   });
   test('pass single ref', () => {
     const { result } = renderHook(() => {
-      const originalRef = useRef<refType>();
+      const originalRef = useRef<refType>(null);
       const resultRef = useSynchronizedRefs<refType>(originalRef);
       resultRef.current = mockObject;
       return { originalRef, resultRef };
     });
     expect(result.current.originalRef.current).toEqual(mockObject);
     act(() => {
-      result.current.resultRef.current.data = 12;
+      if (result.current.resultRef.current) {
+        result.current.resultRef.current.data = 12;
+      }
     });
     expect(result.current.originalRef.current).toEqual({ data: 12 });
   });
 
   test('pass multiple ref', () => {
     const { result } = renderHook(() => {
-      const ref1 = useRef<refType>();
-      const ref2 = useRef<refType>();
+      const ref1 = useRef<refType>(null);
+      const ref2 = useRef<refType>(null);
       const resultRef = useSynchronizedRefs<refType>(ref1, ref2);
       resultRef.current = mockObject;
       return { ref1, ref2, resultRef };
@@ -43,7 +45,9 @@ describe('useCombinedRef', () => {
     expect(result.current.ref2.current).toEqual(mockObject);
 
     act(() => {
-      result.current.resultRef.current.data = 7;
+      if (result.current.resultRef.current) {
+        result.current.resultRef.current.data = 7;
+      }
     });
 
     expect(result.current.ref1.current).toEqual({ data: 7 });

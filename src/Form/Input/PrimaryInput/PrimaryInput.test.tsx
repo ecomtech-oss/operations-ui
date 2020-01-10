@@ -9,11 +9,16 @@ describe('PrimaryInput', () => {
     const { container } = render(<PrimaryInput />);
     expect(container).toContainHTML('input');
   });
+
   test('react on event', () => {
     const changeEvent = jest.fn();
     const { container } = render(<PrimaryInput onChange={changeEvent} />);
+
     const input = container.querySelector('input');
-    fireEvent.change(input, { target: { value: 'test' } });
+    if (input) {
+      fireEvent.change(input, { target: { value: 'test' } });
+    }
+
     expect(changeEvent).toHaveBeenCalled();
   });
 
@@ -22,8 +27,12 @@ describe('PrimaryInput', () => {
     const { container } = render(
       <PrimaryInput onFocus={focusEvent} disabled={true} />,
     );
+
     const input = container.querySelector('input');
-    fireEvent.click(input);
+    if (input) {
+      fireEvent.click(input);
+    }
+
     expect(focusEvent).toHaveBeenCalledTimes(0);
   });
   test('show error', () => {

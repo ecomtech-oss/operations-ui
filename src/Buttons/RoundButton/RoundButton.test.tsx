@@ -10,12 +10,18 @@ describe('RoundButton', () => {
     const { container } = render(<RoundButton icon={Logout} />);
     expect(container).toContainHTML('svg');
   });
+
   test('react on event', () => {
     const clickHanlder = jest.fn();
     const { container } = render(
       <RoundButton onClick={clickHanlder} icon={Logout} />,
     );
-    fireEvent.click(container.querySelector('button'));
+
+    const button = container.querySelector('button');
+    if (button) {
+      fireEvent.click(button);
+    }
+
     expect(clickHanlder).toHaveBeenCalled();
   });
 
@@ -24,7 +30,12 @@ describe('RoundButton', () => {
     const { container } = render(
       <RoundButton onClick={clickHanlder} icon={Logout} disabled={true} />,
     );
-    fireEvent.click(container.querySelector('button'));
+
+    const button = container.querySelector('button');
+    if (button) {
+      fireEvent.click(button);
+    }
+
     expect(clickHanlder).toBeCalledTimes(0);
   });
 
@@ -38,7 +49,12 @@ describe('RoundButton', () => {
         disabled={false}
       />,
     );
-    fireEvent.click(container.querySelector('button'));
+
+    const button = container.querySelector('button');
+    if (button) {
+      fireEvent.click(button);
+    }
+
     expect(clickHanlder).toBeCalledTimes(0);
   });
 });

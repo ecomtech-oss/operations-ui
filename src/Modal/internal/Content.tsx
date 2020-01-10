@@ -15,7 +15,7 @@ interface Props {
 }
 
 export const Content = ({ children, onDismiss }: Props) => {
-  const modalRef = useRef<HTMLDivElement>();
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useOnDocumentKeyDown(e => {
     if (e.key === 'Escape') {
