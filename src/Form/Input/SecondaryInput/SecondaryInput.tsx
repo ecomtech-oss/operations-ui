@@ -82,7 +82,7 @@ export const SecondaryInput = forwardRef(
           placeholder={placeholder}
           className={cx('input', size, {
             error: hasError,
-            'left-padding': hasLeftIcon,
+            'left-padding': !!icon,
           })}
         />
         <ClearButton className={cx('clear-button')} onClick={handleClear} />
