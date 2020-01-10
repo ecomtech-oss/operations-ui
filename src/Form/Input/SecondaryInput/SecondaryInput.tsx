@@ -52,6 +52,11 @@ export const SecondaryInput = forwardRef(
 
     const handleClear = (e: MouseEvent<HTMLButtonElement>) => {
       const input = internalRef.current;
+
+      if (!input) {
+        return;
+      }
+
       const event = mouseEventToChangeEvent(input, e);
       input.value = '';
       input.focus();
@@ -67,7 +72,7 @@ export const SecondaryInput = forwardRef(
 
     return (
       <Typography.Text size={textSize} className={cx('wrapper', className)}>
-        {hasLeftIcon && (
+        {hasLeftIcon && icon && (
           <Icon size="small" className={cx('icon')}>
             {icon}
           </Icon>

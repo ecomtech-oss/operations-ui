@@ -45,12 +45,18 @@ export const useNotificationStore = () => {
     remove(detail.id);
 
   useEffect(() => {
-    document.addEventListener(PUSH_EVENT, handlePushEvent);
-    document.addEventListener(CLOSE_EVENT, handleCloseEvent);
+    document.addEventListener(PUSH_EVENT, handlePushEvent as EventListener);
+    document.addEventListener(CLOSE_EVENT, handleCloseEvent as EventListener);
 
     return () => {
-      document.removeEventListener(PUSH_EVENT, handlePushEvent);
-      document.removeEventListener(CLOSE_EVENT, handleCloseEvent);
+      document.removeEventListener(
+        PUSH_EVENT,
+        handlePushEvent as EventListener,
+      );
+      document.removeEventListener(
+        CLOSE_EVENT,
+        handleCloseEvent as EventListener,
+      );
     };
   }, []);
 

@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "size": "yarn build:lib && size-limit",
-    "ci": "yarn s lint && yarn test --coverage && yarn size",
+    "types": "tsc --noEmit",
+    "ci": "yarn s lint && yarn types && yarn test --coverage && yarn size",
     "prepare": "install-self-peers -- --ignore-scripts && yarn build:lib",
     "s": "yarn soda"
   },
@@ -39,13 +40,6 @@
     "autoprefixer": "^9.6.5",
     "codecov": "^3.6.1",
     "css-loader": "^3.2.0",
-    "fs-extra": "^8.1.0",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-cli": "^2.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-typescript": "^5.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "postcss-import": "^12.0.1",
@@ -64,6 +58,7 @@
     "style-loader": "^1.0.0",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.0",
+    "typescript": "^3.7.4",
     "webpack": "^4.41.2"
   },
   "husky": {
