@@ -25,14 +25,14 @@ type Props = {
   onLogin(data: FormData): Promise<LoginResult>;
 
   /** Функция вызывающияся после успешного логина */
-  afterLogin(): void;
+  afterLogin?(): void;
 };
 
-type ErroResult = Exclude<LoginResult, LoginResult.Success>;
+type ErrorResult = Exclude<LoginResult, LoginResult.Success>;
 
 export const Login = ({ onLogin, logo, afterLogin }: Props) => {
   const [isLoading, setLoader] = useState(false);
-  const [erorr, setError] = useState<ErroResult | false>(false);
+  const [erorr, setError] = useState<ErrorResult | null>(null);
   const { handleSubmit, register, errors } = useForm<FormData>({
     reValidateMode: 'onBlur',
     submitFocusError: false,
@@ -41,9 +41,13 @@ export const Login = ({ onLogin, logo, afterLogin }: Props) => {
 
   const onSubmit = async (values: FormData) => {
     setLoader(true);
-    setError(false);
+    setError(null);
     values.phoneNumber = formatPhone(values.phoneNumber);
-    const result = await onLogin(values).catch(() => LoginResult.UnknownError);
+    const { password, phoneNumber } = values;
+    const result = await onLogin({
+      password,
+      phoneNumber: formatPhone(phoneNumber),
+    }).catch(() => LoginResult.UnknownError);
     setLoader(false);
 
     if (result === LoginResult.Success) {
