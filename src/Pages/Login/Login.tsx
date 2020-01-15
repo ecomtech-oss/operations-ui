@@ -8,6 +8,8 @@ import * as Typography from '../../Typography';
 import { PrimaryButton } from '../../Buttons';
 import { LoginResult, errorTextMapper } from './constants';
 import { formatPhone } from './formatPhone';
+import { Logo } from './ui/Logo';
+
 import styles from './Login.css';
 
 const cx = classNames.bind(styles);
@@ -30,14 +32,13 @@ type Props = {
 
 type ErrorResult = Exclude<LoginResult, LoginResult.Success>;
 
-export const Login = ({ onLogin, logo, afterLogin }: Props) => {
+export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
   const [isLoading, setLoader] = useState(false);
   const [erorr, setError] = useState<ErrorResult | null>(null);
   const { handleSubmit, register, errors } = useForm<FormData>({
     reValidateMode: 'onBlur',
     submitFocusError: false,
   });
-  const hasLogo = Boolean(logo);
 
   const onSubmit = async (values: FormData) => {
     setLoader(true);
@@ -59,7 +60,7 @@ export const Login = ({ onLogin, logo, afterLogin }: Props) => {
 
   return (
     <div className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
-      {hasLogo && logo}
+      {logo}
       <form className={styles.form}>
         <Typography.Title bold tag="h1" className={cx('title')}>
           Войти

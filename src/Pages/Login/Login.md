@@ -5,7 +5,7 @@
 ```js
 import { FrameComponent } from '../../../utils/FrameComponent';
 
-<FrameComponent style={{ width: '100%', height: '700px' }} width='100%' height='700px' id="LoginFrame">
+<FrameComponent width='100%' height='700px' frameId="LoginFrame">
   <Login />
 </FrameComponent>
 ```
