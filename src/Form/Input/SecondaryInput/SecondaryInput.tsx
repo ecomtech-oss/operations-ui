@@ -47,11 +47,15 @@ export const SecondaryInput = forwardRef(
     const internalRef = useSynchronizedRefs<HTMLInputElement>(ref);
 
     const hasError = Boolean(errorText);
-    const hasLeftIcon = Boolean(icon);
     const textSize = textSizeMapper[size];
 
     const handleClear = (e: MouseEvent<HTMLButtonElement>) => {
       const input = internalRef.current;
+
+      if (!input) {
+        return;
+      }
+
       const event = mouseEventToChangeEvent(input, e);
       input.value = '';
       input.focus();
@@ -67,7 +71,7 @@ export const SecondaryInput = forwardRef(
 
     return (
       <Typography.Text size={textSize} className={cx('wrapper', className)}>
-        {hasLeftIcon && (
+        {!!icon && (
           <Icon size="small" className={cx('icon')}>
             {icon}
           </Icon>
@@ -78,7 +82,7 @@ export const SecondaryInput = forwardRef(
           placeholder={placeholder}
           className={cx('input', size, {
             error: hasError,
-            'left-padding': hasLeftIcon,
+            'left-padding': !!icon,
           })}
         />
         <ClearButton className={cx('clear-button')} onClick={handleClear} />

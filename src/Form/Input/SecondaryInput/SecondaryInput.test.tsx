@@ -14,8 +14,12 @@ describe('SecondaryInput', () => {
   test('react on event', () => {
     const changeEvent = jest.fn();
     const { container } = render(<SecondaryInput onChange={changeEvent} />);
+
     const input = container.querySelector('input');
-    fireEvent.change(input, { target: { value: 'test' } });
+    if (input) {
+      fireEvent.change(input, { target: { value: 'test' } });
+    }
+
     expect(changeEvent).toHaveBeenCalled();
   });
 
@@ -24,8 +28,12 @@ describe('SecondaryInput', () => {
     const { container } = render(
       <SecondaryInput onFocus={focusEvent} disabled={true} />,
     );
+
     const input = container.querySelector('input');
-    fireEvent.click(input);
+    if (input) {
+      fireEvent.click(input);
+    }
+
     expect(focusEvent).toHaveBeenCalledTimes(0);
   });
   test('render icon', () => {
@@ -50,9 +58,13 @@ describe('SecondaryInput', () => {
     );
     const button = container.querySelector('button');
     const input = container.querySelector('input');
-    fireEvent.click(button);
+
+    if (button) {
+      fireEvent.click(button);
+    }
+
     expect(changeEvent).toBeCalled();
     expect(clearEvent).toBeCalled();
-    expect(input.value).toBe('');
+    expect(input?.value).toBe('');
   });
 });

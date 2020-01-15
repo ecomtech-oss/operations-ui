@@ -12,7 +12,8 @@ import { ButtonSize } from './types';
 import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
 import { textSizeMapper } from './textSizeMapper';
 const cx = cn.bind(iternalStyles);
-export interface ExternalButtonPropsInner {
+
+interface ExternalButtonProps {
   /** Размер кнопки */
   size?: ButtonSize;
 
@@ -35,9 +36,7 @@ export interface ExternalButtonPropsInner {
   className?: string;
 }
 
-export type ExternalButtonProps = ExternalButtonPropsInner & BaseButtonsProps;
-
-interface IternalButtonPropsInner extends ExternalButtonPropsInner {
+interface IternalButtonPropsInner extends ExternalButtonProps {
   color: Colors;
 }
 
