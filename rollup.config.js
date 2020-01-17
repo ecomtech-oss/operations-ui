@@ -11,12 +11,12 @@ export default {
     'react',
     'react-dom',
     'react-focus-lock',
-    'klona',
+    'react-input-mask',
     'react-hook-form',
     'classnames/bind',
-    'react-input-mask',
-    'nanoid',
     '@samokat/operations-icons',
+    'klona',
+    'nanoid',
   ],
 
   plugins: [

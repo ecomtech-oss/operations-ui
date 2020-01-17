@@ -16,5 +16,7 @@
     "outDir": "dist",
     "declaration": true,
     "baseUrl": "."
-  }
+  },
+  "include": ["src/**/*", "types.d.ts"],
+  "exclude": ["./utils"]
 }
