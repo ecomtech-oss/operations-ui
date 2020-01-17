@@ -10,7 +10,6 @@ import { PrimaryButton } from '../../Buttons';
 import { LoginResult, errorTextMapper, validationRules } from './constants';
 import { formatPhone } from './formatPhone';
 import { Logo } from './ui/Logo';
-
 import styles from './Login.css';
 
 const cx = classNames.bind(styles);
@@ -50,11 +49,14 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
       phoneNumber: formatPhone(phoneNumber),
     }).catch(() => LoginResult.UnknownError);
     setLoader(false);
+    const isResultSuccess = result === LoginResult.Success;
 
-    if (result === LoginResult.Success) {
-      afterLogin && afterLogin();
-    } else {
-      setError(result);
+    if (isResultSuccess && afterLogin) {
+      afterLogin();
+    }
+
+    if (!isResultSuccess) {
+      setError(result as ErrorResult);
     }
   };
 

@@ -25,7 +25,7 @@ export const FrameComponent = ({
         const head = iframeDoc.getElementsByTagName('head')[0];
         styles.forEach(item => {
           const clone = item.cloneNode(true);
-          head.appendChild(clone);
+          head.append(clone);
         });
       }}
     >
