@@ -1,11 +1,13 @@
-import React, { useState, ReactNode, useEffect } from 'react';
+import React, { useState, ReactNode } from 'react';
+import klona from 'klona';
 import classNames from 'classnames/bind';
 import { useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
+
 import { PrimaryInput, ErrorText } from '../../Form';
 import * as Typography from '../../Typography';
 import { PrimaryButton } from '../../Buttons';
-import { LoginResult, errorTextMapper } from './constants';
+import { LoginResult, errorTextMapper, validationRules } from './constants';
 import { formatPhone } from './formatPhone';
 import { Logo } from './ui/Logo';
 
@@ -70,13 +72,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
             name="phoneNumber"
             autoComplete="on"
             className={styles.phone}
-            ref={register({
-              required: 'Для входа нужен ваш номер',
-              pattern: {
-                value: /^(\+7)\s\d{3}\s\d{3}\-\d{2}\-\d{2}$/gi,
-                message: 'Номер должен состоять из 11 цифр',
-              },
-            })}
+            ref={register(klona(validationRules.phone))} // seems like register mutating argument so we should create new instance on every render;
             errorText={errors.phoneNumber?.message}
           />
         </InputMask>
@@ -85,9 +81,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
           label="Пароль"
           type="password"
           name="password"
-          ref={register({
-            required: 'Для входа нужен пароль',
-          })}
+          ref={register(klona(validationRules.password))} // seems like register mutating argument so we should create new instance on every render;
           errorText={errors.password?.message}
         />
         {erorr && (

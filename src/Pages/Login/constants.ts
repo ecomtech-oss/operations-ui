@@ -14,3 +14,16 @@ export const errorTextMapper = {
   [LoginResult.UnknownError]:
     'Что-то пошло не так. Попробуйте перегрузить страницу',
 };
+
+export const validationRules = {
+  phone: {
+    required: 'Для входа нужен ваш номер',
+    pattern: {
+      value: /^(\+7)\s\d{3}\s\d{3}\-\d{2}\-\d{2}$/gi,
+      message: 'Номер должен состоять из 11 цифр',
+    },
+  },
+  password: {
+    required: 'Для входа нужен пароль',
+  },
+};

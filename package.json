@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "klona": "^1.1.1",
     "nanoid": "^2.1.8",
     "react-focus-lock": "^2.2.1",
     "react-hook-form": "^4.2.1",
