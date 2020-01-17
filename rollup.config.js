@@ -11,6 +11,7 @@ export default {
     'react',
     'react-dom',
     'react-focus-lock',
+    'klona',
     'react-hook-form',
     'classnames/bind',
     'react-input-mask',
