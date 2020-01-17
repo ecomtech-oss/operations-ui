@@ -4,7 +4,7 @@ import * as Typography from './Typography';
 import Icon from './Icon';
 import Loader from './Loader';
 import Notifications from './Mega/Notifications';
-import Login from './Pages/Login';
+import Login, { LoginResult } from './Pages/Login';
 
 export {
   GhostButton,
@@ -14,4 +14,4 @@ export {
 } from './Buttons';
 export { ErrorText, PrimaryInput, SecondaryInput } from './Form';
 export { Modal, ModalContainer, useModalState } from './Mega/Modal';
-export { Typography, Icon, Loader, Notifications, Login };
+export { Typography, Icon, Loader, Notifications, Login, LoginResult };
