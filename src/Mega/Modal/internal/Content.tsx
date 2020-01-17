@@ -2,8 +2,8 @@ import React, { ReactNode, useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import classnames from 'classnames/bind';
 
-import { useOnDocumentKeyDown } from '../../utils/useOnDocumentKeyDown';
-import { useOnEventOutside } from '../../utils/useOnEventOutside';
+import { useOnDocumentKeyDown } from '../../../utils/useOnDocumentKeyDown';
+import { useOnEventOutside } from '../../../utils/useOnEventOutside';
 import { useLockBodyScroll } from './useLockBodyScroll';
 import styles from './Content.css';
 

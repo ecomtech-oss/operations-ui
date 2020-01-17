@@ -46,7 +46,13 @@ module.exports = {
         },
         {
           name: 'Mega',
-          components: 'src/{Notifications,Modal}/[A-Z]*.tsx',
+          components: 'src/Mega/**/[A-Z]*.tsx',
+          exampleMode: 'collapse',
+          usageMode: 'collapse',
+        },
+        {
+          name: 'Pages',
+          components: 'src/Pages/**/[A-Z]*.tsx',
           exampleMode: 'collapse',
           usageMode: 'collapse',
         },

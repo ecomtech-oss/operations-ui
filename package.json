@@ -17,8 +17,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "klona": "^1.1.1",
     "nanoid": "^2.1.8",
-    "react-focus-lock": "^2.2.1"
+    "react-focus-lock": "^2.2.1",
+    "react-hook-form": "^4.2.1",
+    "react-input-mask": "https://github.com/vladmelnikov/react-input-mask"
   },
   "peerDependencies": {
     "react": "^16.10.2",
@@ -42,11 +45,13 @@
     "css-loader": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
+    "mutationobserver-shim": "^0.3.3",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-modules": "^1.4.1",
     "postcss-nested": "^4.2.1",
     "react-docgen-typescript": "^1.16.1",
+    "react-frame-component": "^4.1.1",
     "react-styleguidist": "^10.2.1",
     "react-test-renderer": "^16.12.0",
     "rimraf": "^3.0.0",
@@ -69,7 +74,7 @@
   },
   "size-limit": [
     {
-      "limit": "30 kb",
+      "limit": "40 kb",
       "path": "dist/*.{js,css}"
     }
   ],

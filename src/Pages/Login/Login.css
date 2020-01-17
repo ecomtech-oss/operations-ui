@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.form {
+  width: 318px;
+}
+
+.title {
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.phone {
+  margin-bottom: 12px;
+}
+
+.password {
+  margin-bottom: 32px;
+}
+
+.common-error {
+  margin-bottom: 8px;
+  text-align: center;
+}
