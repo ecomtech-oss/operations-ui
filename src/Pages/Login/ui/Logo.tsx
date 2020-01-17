@@ -1,11 +1,12 @@
 import React from 'react';
 
-import * as styles from './Logo.css';
+import styles from './Logo.css';
 
 export const Logo = () => {
   return (
     <div className={styles.logo}>
       <svg
+        data-testid="logo"
         width="48"
         height="48"
         viewBox="0 0 48 48"

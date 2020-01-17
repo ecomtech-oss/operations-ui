@@ -1,8 +1,7 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, ReactNode, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import { useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
-
 import { PrimaryInput, ErrorText } from '../../Form';
 import * as Typography from '../../Typography';
 import { PrimaryButton } from '../../Buttons';
@@ -43,7 +42,6 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
   const onSubmit = async (values: FormData) => {
     setLoader(true);
     setError(null);
-    values.phoneNumber = formatPhone(values.phoneNumber);
     const { password, phoneNumber } = values;
     const result = await onLogin({
       password,
@@ -52,7 +50,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
     setLoader(false);
 
     if (result === LoginResult.Success) {
-      afterLogin();
+      afterLogin && afterLogin();
     } else {
       setError(result);
     }
@@ -79,7 +77,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
                 message: 'Номер должен состоять из 11 цифр',
               },
             })}
-            errorText={errors.phoneNumber && errors.phoneNumber.message}
+            errorText={errors.phoneNumber?.message}
           />
         </InputMask>
         <PrimaryInput
@@ -90,7 +88,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
           ref={register({
             required: 'Для входа нужен пароль',
           })}
-          errorText={errors.password && errors.password.message}
+          errorText={errors.password?.message}
         />
         {erorr && (
           <ErrorText className={cx('common-error')}>

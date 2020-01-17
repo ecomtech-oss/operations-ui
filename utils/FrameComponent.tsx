@@ -21,7 +21,7 @@ export const FrameComponent = ({
       contentDidMount={() => {
         const styles = Array.from(document.querySelectorAll('style'));
         const iframe = document.getElementById(frameId) as HTMLFrameElement;
-        const iframeDoc = iframe.contentWindow.document;
+        const iframeDoc = iframe.contentWindow!.document;
         const head = iframeDoc.getElementsByTagName('head')[0];
         styles.forEach(item => {
           const clone = item.cloneNode(true);
