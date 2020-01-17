@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/samokat-oss/operations-ui/compare/v0.5.0...v0.5.1) (2020-01-17)
+
+
+### Bug Fixes
+
+* **login:** reexport login result enum ([7b0c914](https://github.com/samokat-oss/operations-ui/commit/7b0c914))
+
+
+### Build System
+
+* **rollup:** override tsconfig ([7b8915c](https://github.com/samokat-oss/operations-ui/commit/7b8915c))
+* **rollup typescript:** build fix typings ([a94be96](https://github.com/samokat-oss/operations-ui/commit/a94be96))
+
+
+
 ## [0.5.0](https://github.com/samokat-oss/operations-ui/compare/v0.4.4...v0.5.0) (2020-01-17)
 
 
