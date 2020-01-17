@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/samokat-oss/operations-ui/compare/v0.4.4...v0.5.0) (2020-01-17)
+
+
+### Bug Fixes
+
+* fix bug with strict mode migration ([015e483](https://github.com/samokat-oss/operations-ui/commit/015e483))
+
+
+### Build System
+
+* **external dependency rollup:** added klona ([9dcdd27](https://github.com/samokat-oss/operations-ui/commit/9dcdd27))
+* **size limit:** max size 40kb ([4ccf478](https://github.com/samokat-oss/operations-ui/commit/4ccf478))
+
+
+### Features
+
+* **login page:** move mega components into mega directory ([59e5402](https://github.com/samokat-oss/operations-ui/commit/59e5402))
+* **login template:** common login page template ([3835b4a](https://github.com/samokat-oss/operations-ui/commit/3835b4a))
+* **mega:** login page ([90fcf1f](https://github.com/samokat-oss/operations-ui/commit/90fcf1f))
+* **mega:** login page template ([6158e74](https://github.com/samokat-oss/operations-ui/commit/6158e74))
+
+
+### Tests
+
+* **login page:** unit testing ([a3fb8fb](https://github.com/samokat-oss/operations-ui/commit/a3fb8fb))
+
+
+
 ### [0.4.4](https://github.com/samokat-oss/operations-ui/compare/v0.4.3...v0.4.4) (2019-12-27)
 
 
