@@ -3,7 +3,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/{!(index),}.{ts,tsx}'],
   setupFilesAfterEnv: [
     '@testing-library/jest-dom/extend-expect',
-    '<rootDir>/jest.setup.ts',
+    '<rootDir>/jest.setup.js',
   ],
   testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/'],
   moduleNameMapper: {

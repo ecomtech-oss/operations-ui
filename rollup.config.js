@@ -24,6 +24,11 @@ export default {
       modules: true,
       extract: 'dist/styles.css',
     }),
-    typescript(),
+    typescript({
+      tsconfigOverride: {
+        include: ['src/**/*', 'types.d.ts'],
+        exclude: ['./utils'],
+      },
+    }),
   ],
 };
