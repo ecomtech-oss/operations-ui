@@ -9141,9 +9141,10 @@ react-icons@^3.8.0:
   dependencies:
     camelcase "^5.0.0"
 
-"react-input-mask@https://github.com/vladmelnikov/react-input-mask":
-  version "3.0.0-alpha.0"
-  resolved "https://github.com/vladmelnikov/react-input-mask#ce991090c9b5a398cfee503bd22a1b8c59063d97"
+react-input-mask@^3.0.0-alpha.1:
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-3.0.0-alpha.1.tgz#c9865e2a21bba12a3139371a2e903c38a6cc687d"
+  integrity sha512-OG944hnXFEPnRkpt79K5iwQkUCAgzrBk7bpKsbgJyiKYlr0w8sANImNv5S0jG3lzcJu3hn24tn/1+q26AnBxxg==
   dependencies:
     invariant "^2.2.4"
     prop-types "^15.7.2"

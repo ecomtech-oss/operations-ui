@@ -21,7 +21,7 @@
     "nanoid": "^2.1.8",
     "react-focus-lock": "^2.2.1",
     "react-hook-form": "^4.2.1",
-    "react-input-mask": "https://github.com/vladmelnikov/react-input-mask"
+    "react-input-mask": "^3.0.0-alpha.1"
   },
   "peerDependencies": {
     "react": "^16.10.2",
