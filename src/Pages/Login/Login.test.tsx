@@ -97,7 +97,7 @@ describe('Login page', () => {
       onLogin,
       afterLogin,
     } = setupLoginPage(
-      jest.fn().mockResolvedValue(LoginResult.FobiddenError),
+      jest.fn().mockResolvedValue(LoginResult.ForbiddenError),
       jest.fn(),
     );
     const { queryByText } = renderResult;
