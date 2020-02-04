@@ -1,5 +1,5 @@
 import { IconSize } from '../../Icon';
-import { ButtonSize } from './types';
+import { ButtonSize } from './buttonSize';
 
 export const iconSizeMapper: { [key in ButtonSize]: IconSize } = {
   small: 'small',

@@ -8,7 +8,7 @@ import { BaseButtonsProps } from '../Base';
 import baseStyles from '../Base.css';
 import iternalStyles from './Internal.css';
 import { iconSizeMapper } from './iconSizeMapper';
-import { ButtonSize } from './types';
+import { ButtonSize } from './buttonSize';
 import { Colors, loaderPresetsMapper } from './loaderPresetsMapper';
 import { textSizeMapper } from './textSizeMapper';
 const cx = cn.bind(iternalStyles);
