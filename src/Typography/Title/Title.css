@@ -1,14 +1,21 @@
 .title {
   font-size: 24px;
   line-height: 28px;
+  font-weight: normal;
+  letter-spacing: 0.002em;
+}
+
+.small {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.normal {
+  font-size: 32px;
+  line-height: 32px;
 }
 
 .bold {
   font-weight: bold;
   letter-spacing: 0;
-}
-
-.normal {
-  font-weight: normal;
-  letter-spacing: 0.002em;
 }
