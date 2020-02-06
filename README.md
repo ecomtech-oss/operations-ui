@@ -19,8 +19,10 @@ import '@samokat/operations-ui/dist/styles.css'
 ```
 
 + Добавь RobotoMono шрифт
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet"> 
 
+```html
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet"> 
+```
 + Используй компоненты
 
 ```ts
