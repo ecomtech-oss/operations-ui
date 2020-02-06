@@ -18,16 +18,20 @@ interface Props {
 
   /** Размер текста */
   size?: 'small' | 'normal';
+
+  /** Должен ли текст быть жирным */
+  bold?: boolean;
 }
 
 export const Text = ({
   children,
   className,
   tag = 'span',
+  bold = false,
   size = 'normal',
 }: Props) => {
   return (
-    <Typography className={cx('text', size, className)} tag={tag}>
+    <Typography className={cx('text', size, { bold }, className)} tag={tag}>
       {children}
     </Typography>
   );
