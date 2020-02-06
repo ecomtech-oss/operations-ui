@@ -5,7 +5,6 @@ import Icon from './Icon';
 import Loader from './Loader';
 import Notifications from './Mega/Notifications';
 import Login, { LoginResult } from './Pages/Login';
-
 export {
   GhostButton,
   SecondaryButton,

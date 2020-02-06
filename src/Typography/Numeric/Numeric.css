@@ -1,0 +1,11 @@
+.numeric {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  letter-spacing: 0.002em;
+}
+
+.bold {
+  font-weight: bold;
+}

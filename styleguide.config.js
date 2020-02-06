@@ -2,6 +2,17 @@ const path = require('path');
 
 module.exports = {
   defaultExample: true,
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap',
+        },
+      ],
+    },
+  },
   propsParser: require('react-docgen-typescript').withDefaultConfig({
     savePropValueAsString: true,
   }).parse,
