@@ -32,7 +32,7 @@ export const Title = ({
 }: Props) => {
   return (
     <Typography className={cx('title', size, { bold }, className)} tag={tag}>
-      - {children}
+      {children}
     </Typography>
   );
 };
