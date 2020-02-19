@@ -11,3 +11,8 @@
   font-size: 15px;
   line-height: 18px;
 }
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 0.002em;
+}

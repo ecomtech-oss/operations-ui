@@ -16,6 +16,9 @@ interface Props {
   /** Тег, в который будет срендерен компонент */
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 
+  /** Размер текста */
+  size?: 'small' | 'normal';
+
   /** Должен ли заголовок быть жирным */
   bold?: boolean;
 }
@@ -25,11 +28,10 @@ export const Title = ({
   className,
   tag = 'span',
   bold = false,
+  size = 'small',
 }: Props) => {
-  const weight = bold ? 'bold' : 'normal';
-
   return (
-    <Typography className={cx('title', weight, className)} tag={tag}>
+    <Typography className={cx('title', size, { bold }, className)} tag={tag}>
       {children}
     </Typography>
   );

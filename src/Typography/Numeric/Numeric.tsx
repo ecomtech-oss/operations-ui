@@ -2,13 +2,13 @@ import React from 'react';
 import classnames from 'classnames/bind';
 
 import { Typography } from '../internal/Typography';
-import styles from './Text.css';
+import styles from './Numeric.css';
 
 const cx = classnames.bind(styles);
 
 interface Props {
   /** Контент */
-  children: React.ReactNode;
+  children: number;
 
   /** Дополнительный класс */
   className?: string;
@@ -16,23 +16,28 @@ interface Props {
   /** Тег, в который будет срендерен компонент */
   tag?: 'p' | 'span';
 
-  /** Размер текста */
-  size?: 'small' | 'normal';
-
-  /** Должен ли текст быть жирным */
+  /** Жирный шрифт */
   bold?: boolean;
+
+  /** Валюта */
+  currency?: 'RUB' | 'USD' | 'EUR';
 }
 
-export const Text = ({
+export const Numeric = ({
   children,
   className,
-  tag = 'span',
+  currency,
   bold = false,
-  size = 'normal',
+  tag = 'span',
 }: Props) => {
+  const formattedNumber = children.toLocaleString(
+    'ru-RU',
+    currency && { style: 'currency', currency },
+  );
+
   return (
-    <Typography className={cx('text', size, { bold }, className)} tag={tag}>
-      {children}
+    <Typography className={cx('numeric', { bold }, className)} tag={tag}>
+      {formattedNumber}
     </Typography>
   );
 };
