@@ -37,3 +37,12 @@ const App = () => {
 ```
 
 + Восхитительно!
+
+
+## HowTo: Release
+
+1. Make your changes and commit it
+2. Run `yarn s release`
+3. Run `git push --follow-tags`
+4. Travis will publish it to NPM
+5. Brilliant!
