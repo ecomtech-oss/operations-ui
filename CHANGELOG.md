@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/samokat-oss/operations-ui/compare/v0.6.2...v0.6.4) (2020-06-15)
+
+
+### Bug Fixes
+
+* **login:** add autocomplete attr on Login form password field ([c1914b8](https://github.com/samokat-oss/operations-ui/commit/c1914b8))
+
+
+### Build System
+
+* **deps:** bump acorn from 5.7.3 to 5.7.4 ([840d2db](https://github.com/samokat-oss/operations-ui/commit/840d2db))
+* **deps:** bump websocket-extensions from 0.1.3 to 0.1.4 ([8f36d36](https://github.com/samokat-oss/operations-ui/commit/8f36d36))
+* **deps-dev:** bump codecov from 3.6.1 to 3.6.5 ([2892932](https://github.com/samokat-oss/operations-ui/commit/2892932))
+
+
+
+### [0.6.3](https://github.com/samokat-oss/operations-ui/compare/v0.6.2...v0.6.3) (2020-06-15)
+
+
+### Bug Fixes
+
+* **login:** add autocomplete attr on Login form password field ([c1914b8](https://github.com/samokat-oss/operations-ui/commit/c1914b8))
+
+
+### Build System
+
+* **deps:** bump acorn from 5.7.3 to 5.7.4 ([840d2db](https://github.com/samokat-oss/operations-ui/commit/840d2db))
+* **deps:** bump websocket-extensions from 0.1.3 to 0.1.4 ([8f36d36](https://github.com/samokat-oss/operations-ui/commit/8f36d36))
+* **deps-dev:** bump codecov from 3.6.1 to 3.6.5 ([2892932](https://github.com/samokat-oss/operations-ui/commit/2892932))
+
+
+
 ### [0.6.2](https://github.com/samokat-oss/operations-ui/compare/v0.6.1...v0.6.2) (2020-02-07)
 
 
