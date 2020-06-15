@@ -83,6 +83,7 @@ export const Login = ({ onLogin, logo = <Logo />, afterLogin }: Props) => {
           label="Пароль"
           type="password"
           name="password"
+          autoComplete="password"
           ref={register(klona(validationRules.password))} // seems like register mutating argument so we should create new instance on every render;
           errorText={errors.password?.message}
         />
